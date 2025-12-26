@@ -54,9 +54,9 @@ export const Footer = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-8">
+        <div className="grid gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16">
           {/* Brand Section */}
-          <div className="lg:col-span-4">
+          <div>
             <Link to="/" className="inline-flex items-center gap-3">
               <motion.div
                 className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30"
@@ -96,10 +96,26 @@ export const Footer = () => {
                 );
               })}
             </div>
+
+            {/* Contact Info */}
+            <div className="mt-8 space-y-3">
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-primary" />
+                <span className="text-sm text-muted-foreground">support@dengueexpert.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-primary" />
+                <span className="text-sm text-muted-foreground">+62 21 1234 5678</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-sm text-muted-foreground">Jakarta, Indonesia</span>
+              </div>
+            </div>
           </div>
 
           {/* Links Sections */}
-          <div className="grid gap-8 sm:grid-cols-3 lg:col-span-5 lg:col-start-6">
+          <div className="grid gap-8 sm:grid-cols-3">
             {/* Product Links */}
             <div>
               <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
@@ -159,42 +175,6 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
-          </div>
-
-          {/* Contact Section */}
-          <div className="lg:col-span-3">
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-              Contact Us
-            </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Mail className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Email</p>
-                  <p className="text-sm font-medium text-foreground">support@dengueexpert.com</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Phone className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Phone</p>
-                  <p className="text-sm font-medium text-foreground">+62 21 1234 5678</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <MapPin className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Address</p>
-                  <p className="text-sm font-medium text-foreground">Jakarta, Indonesia</p>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
 
