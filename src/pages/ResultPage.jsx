@@ -63,9 +63,9 @@ export default function ResultPage() {
 
   const getSeverityIcon = () => {
     const diagnosis = test.diagnosed_disease;
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
+    if (diagnosis?.includes('P4 -') || diagnosis?.includes('P3 -')) {
       return <AlertCircle className="h-16 w-16 text-white" />;
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
+    } else if (diagnosis?.includes('P2 -') || diagnosis?.includes('P1 -')) {
       return <AlertTriangle className="h-16 w-16 text-white" />;
     } else {
       return <CheckCircle2 className="h-16 w-16 text-white" />;
@@ -74,9 +74,9 @@ export default function ResultPage() {
 
   const getSeverityGradient = () => {
     const diagnosis = test.diagnosed_disease;
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
+    if (diagnosis?.includes('P4 -') || diagnosis?.includes('P3 -')) {
       return 'from-red-500 to-rose-600';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
+    } else if (diagnosis?.includes('P2 -') || diagnosis?.includes('P1 -')) {
       return 'from-orange-500 to-amber-500';
     } else {
       return 'from-emerald-500 to-teal-500';
@@ -85,9 +85,9 @@ export default function ResultPage() {
 
   const getSeverityBg = () => {
     const diagnosis = test.diagnosed_disease;
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
+    if (diagnosis?.includes('P4 -') || diagnosis?.includes('P3 -')) {
       return 'from-red-500/10 to-rose-500/10';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
+    } else if (diagnosis?.includes('P2 -') || diagnosis?.includes('P1 -')) {
       return 'from-orange-500/10 to-amber-500/10';
     } else {
       return 'from-emerald-500/10 to-teal-500/10';
@@ -96,9 +96,9 @@ export default function ResultPage() {
 
   const getSeverityBadge = () => {
     const diagnosis = test.diagnosed_disease;
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
+    if (diagnosis?.includes('P4 -') || diagnosis?.includes('P3 -')) {
       return 'Tinggi';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
+    } else if (diagnosis?.includes('P2 -') || diagnosis?.includes('P1 -')) {
       return 'Sedang';
     } else {
       return 'Rendah';
@@ -112,7 +112,6 @@ export default function ResultPage() {
     if (diagnosis.includes('P3')) return 'P3';
     if (diagnosis.includes('P2')) return 'P2';
     if (diagnosis.includes('P1')) return 'P1';
-    if (diagnosis.includes('DD')) return 'DD';
     return 'F';
   };
 
@@ -152,14 +151,6 @@ export default function ResultPage() {
         'Kompres hangat jika demam tinggi',
         'Hindari obat pereda nyeri seperti aspirin atau ibuprofen',
         'Gunakan obat penurun panas yang aman (paracetamol)'
-      ],
-      'DD': [
-        'Istirahat yang cukup di rumah',
-        'Minum air putih atau cairan elektrolit minimal 2 liter per hari',
-        'Konsumsi makanan bergizi seimbang',
-        'Gunakan lotion anti nyamuk',
-        'Pastikan lingkungan bebas genangan air',
-        'Monitor gejala, segera ke dokter jika memburuk'
       ],
       'F': [
         'Jaga pola hidup sehat dan istirahat cukup',
@@ -364,7 +355,7 @@ export default function ResultPage() {
               <CardDescription>Langkah-langkah yang disarankan</CardDescription>
             </CardHeader>
             <CardContent className="space-y-5">
-              {test.diagnosed_disease?.includes('DBD') || test.diagnosed_disease?.includes('Demam Berdarah') ? (
+              {test.diagnosed_disease?.includes('P4 -') || test.diagnosed_disease?.includes('P3 -') ? (
                 <motion.div
                   className="flex gap-4 rounded-xl bg-gradient-to-r from-red-500/10 to-rose-500/10 p-5"
                   initial={{ x: -20, opacity: 0 }}
@@ -381,7 +372,7 @@ export default function ResultPage() {
                     </p>
                   </div>
                 </motion.div>
-              ) : test.diagnosed_disease?.includes('DD') || test.diagnosed_disease?.includes('Demam Dengue') ? (
+              ) : test.diagnosed_disease?.includes('P2 -') || test.diagnosed_disease?.includes('P1 -') ? (
                 <motion.div
                   className="flex gap-4 rounded-xl bg-gradient-to-r from-orange-500/10 to-amber-500/10 p-5"
                   initial={{ x: -20, opacity: 0 }}
