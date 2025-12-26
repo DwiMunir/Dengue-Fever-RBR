@@ -144,6 +144,8 @@
       "noTests": "No tests yet",
       "averageCF": "Average CF",
       "averageCFDesc": "Certainty factor average",
+      "dengueIndicated": "Dengue Indicated",
+      "dengueIndicatedDesc": "Tests indicating dengue",
       "na": "N/A"
     },
     "quickActions": {

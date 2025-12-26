@@ -200,11 +200,14 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border/50 py-6">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="flex items-center gap-1 text-sm text-muted-foreground">
-              © {currentYear} DengueExpert. Made with 
-              <Heart className="h-4 w-4 fill-red-500 text-red-500" /> 
-              for better health.
+          <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+            <p className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
+              <span>© {currentYear} DengueExpert.</span>
+              <span className="flex items-center gap-1">
+                Made with 
+                <Heart className="h-4 w-4 fill-red-500 text-red-500" /> 
+                for better health.
+              </span>
             </p>
             <p className="text-sm text-muted-foreground">
               Powered by <span className="font-semibold text-primary">Rule-Based Expert System</span>

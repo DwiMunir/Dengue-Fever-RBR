@@ -13,7 +13,6 @@ import {
   ChevronRight,
   Activity,
   AlertCircle,
-  CheckCircle2,
   Sparkles,
   Zap,
   Loader2
@@ -23,6 +22,7 @@ import { getSeverityInfo } from '@/utils/ruleBasedReasoning';
 import { AnimatedPage, FadeIn, StaggerContainer, StaggerItem, cardHoverVariants } from '@/components/AnimatedPage';
 import { getUser } from '@/utils/localStorage';
 import { useTests } from '@/hooks/useTest';
+import TestHistoryCard from '@/components/TestHistoryCard';
 import dayjs from 'dayjs';
 
 export default function DashboardPage() {
@@ -38,35 +38,7 @@ export default function DashboardPage() {
     return t('dashboard.greeting.evening');
   };
 
-  const getSeverityIcon = (diagnosis) => {
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return <AlertCircle className="h-5 w-5 text-white" />;
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return <Activity className="h-5 w-5 text-white" />;
-    } else {
-      return <CheckCircle2 className="h-5 w-5 text-white" />;
-    }
-  };
 
-  const getSeverityGradient = (diagnosis) => {
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return 'from-red-500 to-rose-500';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return 'from-orange-500 to-amber-500';
-    } else {
-      return 'from-emerald-500 to-teal-500';
-    }
-  };
-
-  const getSeverityBadge = (diagnosis) => {
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return 'destructive';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return 'secondary';
-    } else {
-      return 'outline';
-    }
-  };
 
   // Loading state
   if (isLoading) {
@@ -112,6 +84,7 @@ export default function DashboardPage() {
 
   const user = getUser();
   const statistics = overview?.data?.statistics;
+  const dengueIndicated = testsData?.filter((test) => !test.diagnosed_disease.toLowerCase().includes('f -'))
   const recentTests = testsData || [];
   const totalTests = overview.my_medical_records || 0;
 
@@ -131,11 +104,11 @@ export default function DashboardPage() {
       gradient: 'from-violet-500 to-purple-500'
     },
     {
-      title: t('dashboard.stats.averageCF'),
-      value: statistics?.averageConfidence || '0.00',
-      description: 'Average confidence score',
+      title: t('dashboard.stats.dengueIndicated'),
+      value: dengueIndicated?.length || '0',
+      description: t('dashboard.stats.dengueIndicatedDesc'),
       icon: TrendingUp,
-      gradient: 'from-emerald-500 to-teal-500'
+      gradient: 'from-red-500 to-rose-500'
     }
   ];
 
@@ -317,77 +290,15 @@ export default function DashboardPage() {
               </motion.div>
             ) : (
               <StaggerContainer className="space-y-4">
-                {recentTests.slice(0, 5).map((test) => {
-                  return (
-                    <StaggerItem key={test.id}>
-                      <motion.div
-                        variants={cardHoverVariants}
-                        initial="rest"
-                        whileHover="hover"
-                        whileTap="tap"
-                      >
-                        <Card className="border-0 bg-card/80 shadow-xl backdrop-blur-sm">
-                          <CardContent className="p-6">
-                            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                              {/* Test Info */}
-                              <div className="flex flex-1 items-start gap-4">
-                                <motion.div
-                                  className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${getSeverityGradient(test.diagnosed_disease)} shadow-lg`}
-                                  whileHover={{ rotate: 10, scale: 1.1 }}
-                                >
-                                  {getSeverityIcon(test.diagnosed_disease)}
-                                </motion.div>
-                                <div className="flex-1">
-                                  <div className="mb-2 flex flex-wrap items-center gap-2">
-                                    <h3 className="text-lg font-semibold text-foreground">
-                                      {test.diagnosed_disease || 'Unknown'}
-                                    </h3>
-                                    <Badge variant={getSeverityBadge(test.diagnosed_disease)}>
-                                      {test.patient_code}
-                                    </Badge>
-                                  </div>
-                                  <div className="space-y-1 text-sm text-muted-foreground">
-                                    <div className="flex items-center gap-2">
-                                      <Calendar className="h-4 w-4" />
-                                      <span>{dayjs(test.checkup_at).format('DD MMM YYYY, HH:mm')}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                      <TrendingUp className="h-4 w-4" />
-                                      <span>
-                                        {test.patient_name} ({test.patient_age} tahun)
-                                      </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                      <Activity className="h-4 w-4" />
-                                      <span>
-                                        Gejala: <span className="font-semibold text-foreground">{test.symptoms?.length || 0}</span>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* Actions */}
-                              <div className="flex gap-3">
-                                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                  <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={() => navigate(`/result/${test.id}`)}
-                                    className="h-10 border-2 px-4 transition-all duration-300 hover:border-primary hover:bg-primary/5"
-                                  >
-                                    {t('dashboard.recentAssessments.viewDetails')}
-                                    <ChevronRight className="ml-2 h-4 w-4" />
-                                  </Button>
-                                </motion.div>
-                              </div>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </motion.div>
-                    </StaggerItem>
-                  );
-                })}
+                {recentTests.slice(0, 5).map((test) => (
+                  <StaggerItem key={test.id}>
+                    <TestHistoryCard 
+                      test={test} 
+                      actionButtonType="details"
+                      showDeleteButton={false}
+                    />
+                  </StaggerItem>
+                ))}
               </StaggerContainer>
             )}
           </div>

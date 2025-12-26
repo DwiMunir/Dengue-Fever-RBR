@@ -466,9 +466,6 @@ export default function LandingPage() {
           </FadeIn>
         </div>
       </AnimatedSection>
-
-      {/* Footer */}
-      <Footer />
     </AnimatedPage>
   );
 }

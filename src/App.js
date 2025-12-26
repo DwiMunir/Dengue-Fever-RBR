@@ -16,6 +16,7 @@ import DashboardPage from '@/pages/DashboardPage';
 import TestPage from '@/pages/TestPage';
 import ResultPage from '@/pages/ResultPage';
 import HistoryPage from '@/pages/HistoryPage';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           {/* Fallback */}
           <Route path="*" element={<LandingPage />} />
         </Routes>
+        <Footer />
         <Toaster position="top-right" richColors />
       </BrowserRouter>
     </div>

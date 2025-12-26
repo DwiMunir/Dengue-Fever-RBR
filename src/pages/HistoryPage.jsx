@@ -22,14 +22,9 @@ import {
   History, 
   ClipboardList, 
   Trash2, 
-  Eye, 
   Search,
-  Calendar,
-  TrendingUp,
   AlertCircle,
-  CheckCircle2,
   Sparkles,
-  Activity,
   Loader2
 } from 'lucide-react';
 import { useTests, useDeleteTest } from '@/hooks/useTest';
@@ -37,6 +32,7 @@ import { clearAllTests } from '@/utils/localStorage';
 import { getSeverityInfo } from '@/utils/ruleBasedReasoning';
 import { toast } from 'sonner';
 import { AnimatedPage, FadeIn, StaggerContainer, StaggerItem, cardHoverVariants } from '@/components/AnimatedPage';
+import TestHistoryCard from '@/components/TestHistoryCard';
 
 export default function HistoryPage() {
   const navigate = useNavigate();
@@ -78,37 +74,6 @@ export default function HistoryPage() {
     clearAllTests();
     toast.success(t('history.messages.clearSuccess'));
     refetch();
-  };
-
-  const getSeverityGradient = (diagnosis) => {
-    // Determine severity based on diagnosis
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return 'from-red-500 to-rose-500';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return 'from-orange-500 to-amber-500';
-    } else {
-      return 'from-emerald-500 to-teal-500';
-    }
-  };
-
-  const getSeverityIcon = (diagnosis) => {
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return <AlertCircle className="h-5 w-5 text-white" />;
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return <Activity className="h-5 w-5 text-white" />;
-    } else {
-      return <CheckCircle2 className="h-5 w-5 text-white" />;
-    }
-  };
-
-  const getSeverityBadge = (diagnosis) => {
-    if (diagnosis?.includes('Demam Berdarah Dengue') || diagnosis?.includes('DBD')) {
-      return 'destructive';
-    } else if (diagnosis?.includes('Demam Dengue') || diagnosis?.includes('DD')) {
-      return 'secondary';
-    } else {
-      return 'outline';
-    }
   };
 
   // Loading state
@@ -298,103 +263,16 @@ export default function HistoryPage() {
         ) : (
           <StaggerContainer className="space-y-4">
             <AnimatePresence>
-              {filteredTests.map((test) => {
-                return (
-                  <StaggerItem key={test.id}>
-                    <motion.div
-                      variants={cardHoverVariants}
-                      initial="rest"
-                      whileHover="hover"
-                      whileTap="tap"
-                      layout
-                    >
-                      <Card className="border-0 bg-card/80 shadow-xl backdrop-blur-sm">
-                        <CardContent className="p-6">
-                          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                            {/* Test Info */}
-                            <div className="flex flex-1 items-start gap-4">
-                              <motion.div
-                                className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${getSeverityGradient(test.diagnosed_disease)} shadow-lg`}
-                                whileHover={{ rotate: 10, scale: 1.1 }}
-                              >
-                                {getSeverityIcon(test.diagnosed_disease)}
-                              </motion.div>
-                              <div className="flex-1">
-                                <div className="mb-2 flex flex-wrap items-center gap-2">
-                                  <h3 className="text-lg font-semibold text-foreground">
-                                    {test.diagnosed_disease || 'Unknown'}
-                                  </h3>
-                                  <Badge variant={getSeverityBadge(test.diagnosed_disease)}>
-                                    {test.patient_code}
-                                  </Badge>
-                                </div>
-                                <div className="space-y-1 text-sm text-muted-foreground">
-                                  <div className="flex items-center gap-2">
-                                    <Calendar className="h-4 w-4" />
-                                    <span>{dayjs(test.checkup_at).format('DD MMM YYYY, HH:mm')}</span>
-                                  </div>
-                                  <div className="flex items-center gap-2">
-                                    <TrendingUp className="h-4 w-4" />
-                                    <span>
-                                      {test.patient_name} ({test.patient_age} tahun)
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center gap-2">
-                                    <Activity className="h-4 w-4" />
-                                    <span>
-                                      Gejala: <span className="font-semibold text-foreground">{test.symptoms?.length || 0}</span>
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Actions */}
-                            <div className="flex gap-3">
-                              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                <Button
-                                  variant="outline"
-                                  onClick={() => navigate(`/result/${test.id}`)}
-                                  className="border-2 transition-all duration-300 hover:border-primary hover:bg-primary/5"
-                                >
-                                  <Eye className="mr-2 h-4 w-4" />
-                                  {t('history.viewDetails')}
-                                </Button>
-                              </motion.div>
-                              <AlertDialog>
-                                <AlertDialogTrigger asChild>
-                                  <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                                    <Button variant="ghost" size="icon" className="hover:bg-destructive/10">
-                                      <Trash2 className="h-5 w-5 text-destructive" />
-                                    </Button>
-                                  </motion.div>
-                                </AlertDialogTrigger>
-                                <AlertDialogContent className="border-0 bg-card/95 backdrop-blur-xl">
-                                  <AlertDialogHeader>
-                                    <AlertDialogTitle>{t('history.dialog.deleteOne')}</AlertDialogTitle>
-                                    <AlertDialogDescription>
-                                      {t('history.dialog.deleteOneDesc')}
-                                    </AlertDialogDescription>
-                                  </AlertDialogHeader>
-                                  <AlertDialogFooter>
-                                    <AlertDialogCancel className="border-2">{t('common.cancel')}</AlertDialogCancel>
-                                    <AlertDialogAction 
-                                      onClick={() => handleDelete(test.id)}
-                                      className="bg-destructive text-destructive-foreground"
-                                    >
-                                      {t('history.dialog.deleteButton')}
-                                    </AlertDialogAction>
-                                  </AlertDialogFooter>
-                                </AlertDialogContent>
-                              </AlertDialog>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  </StaggerItem>
-                );
-              })}
+              {filteredTests.map((test) => (
+                <StaggerItem key={test.id}>
+                  <TestHistoryCard 
+                    test={test} 
+                    onDelete={handleDelete}
+                    showDeleteButton={true}
+                    actionButtonType="view"
+                  />
+                </StaggerItem>
+              ))}
             </AnimatePresence>
           </StaggerContainer>
         )}

@@ -144,6 +144,8 @@
       "noTests": "Belum ada tes",
       "averageCF": "Rata-rata CF",
       "averageCFDesc": "Rata-rata faktor kepastian",
+      "dengueIndicated": "Demam Berdarah Terindikasi",
+      "dengueIndicatedDesc": "Tes yang menunjukkan demam berdarah",
       "na": "T/A"
     },
     "quickActions": {
