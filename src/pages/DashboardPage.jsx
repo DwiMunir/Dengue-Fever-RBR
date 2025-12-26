@@ -125,8 +125,8 @@ export default function DashboardPage() {
     },
     {
       title: t('dashboard.stats.lastAssessment'),
-      value: dayjs(recentTests[0].checkup_at).format('DD MMM YYYY') || t('dashboard.stats.na'),
-      description: recentTests[0].checkup_at ? t('dashboard.stats.lastAssessmentDesc') : t('dashboard.stats.noTests'),
+      value: dayjs(recentTests[0]?.checkup_at).format('DD MMM YYYY') || t('dashboard.stats.na'),
+      description: recentTests[0]?.checkup_at ? t('dashboard.stats.lastAssessmentDesc') : t('dashboard.stats.noTests'),
       icon: Calendar,
       gradient: 'from-violet-500 to-purple-500'
     },
