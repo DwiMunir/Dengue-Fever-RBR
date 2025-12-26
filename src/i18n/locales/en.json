@@ -1,0 +1,345 @@
+{
+  "common": {
+    "dengueExpert": "DengueExpert",
+    "diagnosticSystem": "Diagnostic System",
+    "medicalExpertSystem": "Medical Expert System",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "save": "Save",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "nav": {
+    "home": "Home",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "dashboard": "Dashboard",
+    "history": "History",
+    "logout": "Logout",
+    "testHistory": "Test History",
+    "startTest": "Start Test"
+  },
+  "landing": {
+    "hero": {
+      "title": "Dengue Fever Diagnostic",
+      "titleHighlight": "Expert System",
+      "subtitle": "Advanced AI-powered diagnostic system using certainty factor methodology to assess dengue fever symptoms and provide evidence-based medical recommendations.",
+      "startDiagnosis": "Start Diagnosis",
+      "signIn": "Sign In"
+    },
+    "stats": {
+      "questions": "15+",
+      "questionsLabel": "Diagnostic Questions",
+      "accuracy": "95%",
+      "accuracyLabel": "Accuracy Rate",
+      "time": "<5min",
+      "timeLabel": "Assessment Time"
+    },
+    "features": {
+      "title": "Why Choose DengueExpert?",
+      "subtitle": "Our expert system combines medical knowledge with advanced AI algorithms to provide accurate assessments.",
+      "aiPowered": "AI-Powered Diagnosis",
+      "aiPoweredDesc": "Advanced certainty factor method analyzes your symptoms with medical precision.",
+      "comprehensive": "Comprehensive Assessment",
+      "comprehensiveDesc": "Detailed questionnaire covering all dengue fever symptoms and warning signs.",
+      "confidence": "Confidence Scoring",
+      "confidenceDesc": "Get clear certainty factor scores showing probability of dengue infection.",
+      "quickResults": "Quick Results",
+      "quickResultsDesc": "Receive instant diagnostic results with actionable medical recommendations.",
+      "privacyFirst": "Privacy First",
+      "privacyFirstDesc": "Your health data is stored securely and privately on your device.",
+      "trackHistory": "Track History",
+      "trackHistoryDesc": "Monitor your test history and track symptoms over time."
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Simple 3-step process to get your diagnostic assessment",
+      "step1": "Answer Questions",
+      "step1Desc": "Complete our comprehensive symptom questionnaire",
+      "step2": "AI Analysis",
+      "step2Desc": "Our system calculates certainty factors using expert rules",
+      "step3": "Get Results",
+      "step3Desc": "Receive detailed diagnosis with medical recommendations"
+    },
+    "disclaimer": {
+      "title": "Medical Disclaimer",
+      "content": "This expert system is designed to assist in preliminary assessment only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified health providers with any questions regarding a medical condition. In case of emergency or severe symptoms, seek immediate medical attention."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Take the first step towards understanding your symptoms",
+      "button": "Begin Diagnosis Now"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your diagnostic dashboard",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "signingIn": "Signing in...",
+      "orContinue": "Or continue with",
+      "google": "Google",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join DengueExpert to access diagnostic assessments",
+      "fullName": "Full Name",
+      "email": "Email",
+      "dateOfBirth": "Date of Birth",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating account...",
+      "orContinue": "Or continue with",
+      "google": "Google",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "messages": {
+      "loginSuccess": "Login successful!",
+      "loginFailed": "Login failed",
+      "checkCredentials": "Please check your email and password",
+      "welcomeBack": "Welcome back to DengueExpert",
+      "registerSuccess": "Registration successful!",
+      "registerFailed": "Registration failed",
+      "tryAgain": "Please try again",
+      "accountCreated": "Your account has been created",
+      "welcome": "Welcome to DengueExpert",
+      "logoutSuccess": "Successfully logged out",
+      "fillAllFields": "Please fill in all fields",
+      "passwordMismatch": "Passwords do not match",
+      "passwordTooShort": "Password must be at least 6 characters",
+      "googleAuth": "Google Sign-In",
+      "googleAuthMocked": "Google authentication is mocked in this demo",
+      "passwordReset": "Password Reset",
+      "passwordResetMocked": "This feature is mocked in demo"
+    }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    },
+    "welcome": "Welcome to your DengueExpert diagnostic dashboard",
+    "stats": {
+      "totalTests": "Total Tests",
+      "totalTestsDesc": "All time assessments",
+      "lastAssessment": "Last Assessment",
+      "lastAssessmentDesc": "Most recent test",
+      "noTests": "No tests yet",
+      "averageCF": "Average CF",
+      "averageCFDesc": "Certainty factor average",
+      "na": "N/A"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "startNew": "Start New Assessment",
+      "startNewDesc": "Begin a new dengue fever diagnostic test",
+      "viewHistory": "View Test History",
+      "viewHistoryDesc": "Review your previous assessments and results"
+    },
+    "recentAssessments": {
+      "title": "Recent Assessments",
+      "noAssessments": "No assessments yet",
+      "noAssessmentsDesc": "Start your first diagnostic test to track your health",
+      "startAssessment": "Start Assessment",
+      "viewDetails": "View Details",
+      "viewAll": "View All",
+      "certaintyFactor": "Certainty Factor"
+    }
+  },
+  "test": {
+    "title": "Diagnostic Assessment",
+    "subtitle": "Answer all questions accurately for the best diagnosis",
+    "progress": {
+      "question": "Question {{current}} of {{total}}",
+      "complete": "{{percent}}% Complete"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next Question",
+      "submit": "Submit Assessment",
+      "submitting": "Submitting..."
+    },
+    "messages": {
+      "selectAnswer": "Please select an answer to continue",
+      "completed": "Assessment completed!",
+      "calculatingResults": "Calculating your results..."
+    },
+    "categories": {
+      "primarySymptoms": "Primary Symptoms",
+      "secondarySymptoms": "Secondary Symptoms",
+      "warningSigns": "Warning Signs",
+      "severeWarningSigns": "Severe Warning Signs"
+    }
+  },
+  "result": {
+    "title": "Diagnostic Results",
+    "completedOn": "Completed on {{date}}",
+    "risk": "Risk",
+    "certaintyFactor": {
+      "title": "Certainty Factor",
+      "description": "Overall diagnostic confidence score",
+      "range": "Range: -1.0 to +1.0",
+      "indicates": "A certainty factor of {{cf}} indicates {{level}} probability of dengue fever based on your symptoms."
+    },
+    "confidenceLevel": {
+      "title": "Confidence Level",
+      "description": "Reliability of the assessment",
+      "based": "This assessment is based on {{count}} answered questions using the certainty factor methodology."
+    },
+    "recommendations": {
+      "title": "Medical Recommendations",
+      "description": "Next steps based on your assessment",
+      "urgentAction": "Urgent Action Required",
+      "urgentDesc": "Your symptoms indicate a potentially serious condition. Please seek immediate medical attention at the nearest emergency department or call emergency services.",
+      "consultation": "Medical Consultation Advised",
+      "consultationDesc": "Schedule an appointment with a healthcare provider soon. Your symptoms warrant professional medical evaluation and possibly laboratory testing.",
+      "lowRisk": "Low Risk Assessment",
+      "lowRiskDesc": "Your symptoms suggest low probability of dengue fever. Continue monitoring your health and consult a healthcare provider if symptoms worsen or new symptoms appear.",
+      "generalAdvice": "General Advice:",
+      "advice1": "Stay hydrated - drink plenty of fluids",
+      "advice2": "Get adequate rest and avoid strenuous activities",
+      "advice3": "Monitor your temperature and symptoms regularly",
+      "advice4": "Avoid mosquito exposure using repellents and protective clothing",
+      "advice5": "Do not self-medicate with aspirin or NSAIDs - consult a doctor"
+    },
+    "symptomSummary": {
+      "title": "Symptom Summary",
+      "description": "Your responses to the diagnostic questions"
+    },
+    "actions": {
+      "backToDashboard": "Back to Dashboard",
+      "takeNewTest": "Take New Test",
+      "downloadReport": "Download Report"
+    },
+    "disclaimer": {
+      "important": "Important:",
+      "text": "This expert system provides preliminary assessment only and is not a substitute for professional medical diagnosis. Always consult qualified healthcare providers for medical advice and treatment."
+    },
+    "messages": {
+      "testNotFound": "Test not found",
+      "downloadReport": "Download Report",
+      "downloadMocked": "PDF download feature is mocked in this demo"
+    }
+  },
+  "history": {
+    "title": "Test History",
+    "subtitle": "View and manage your diagnostic assessments",
+    "clearAll": "Clear All",
+    "search": "Search by diagnosis, risk level, or date...",
+    "totalTests": "Total Tests",
+    "noHistory": "No test history",
+    "noHistoryDesc": "Start your first diagnostic assessment to see your history here",
+    "noResults": "No results found",
+    "noResultsDesc": "Try adjusting your search terms",
+    "startAssessment": "Start Assessment",
+    "viewDetails": "View Details",
+    "dialog": {
+      "deleteOne": "Delete Test?",
+      "deleteOneDesc": "This will permanently delete this test result. This action cannot be undone.",
+      "deleteAll": "Clear All Tests?",
+      "deleteAllDesc": "This will permanently delete all your test history. This action cannot be undone.",
+      "deleteButton": "Delete",
+      "deleteAllButton": "Delete All"
+    },
+    "messages": {
+      "deleteSuccess": "Test deleted successfully",
+      "deleteFailed": "Failed to delete test",
+      "clearSuccess": "All tests cleared"
+    }
+  },
+  "diagnosis": {
+    "severeTitle": "Severe Dengue - Immediate Medical Attention Required",
+    "severeRec": "Seek emergency medical care immediately. You show strong indicators of severe dengue fever with potentially life-threatening complications.",
+    "highTitle": "Probable Dengue Fever",
+    "highRec": "Consult a healthcare provider urgently. You display significant symptoms consistent with dengue fever. Early medical intervention is crucial.",
+    "moderateTitle": "Possible Dengue Fever",
+    "moderateRec": "Schedule a medical consultation. Your symptoms suggest possible dengue infection. Laboratory tests are recommended for confirmation.",
+    "lowTitle": "Low Probability of Dengue",
+    "lowRec": "Monitor your symptoms. While dengue is less likely, continue observing your health and consult a doctor if symptoms worsen.",
+    "minimalTitle": "Unlikely to be Dengue",
+    "minimalRec": "Dengue fever is unlikely based on your symptoms. However, if you have health concerns, consider consulting a healthcare provider.",
+    "noneTitle": "Dengue Not Indicated",
+    "noneRec": "Your symptoms do not suggest dengue fever. If you have other health concerns, please consult a healthcare professional."
+  },
+  "questions": {
+    "optYes": "Yes",
+    "optNo": "No",
+    "q1": {
+      "question": "Are you experiencing sudden high fever (above 38.5°C or 101.3°F)?",
+      "description": "Dengue typically begins with a sudden onset of high fever that can last 2-7 days."
+    },
+    "q2": {
+      "question": "Do you have a severe headache?",
+      "description": "Intense headaches, particularly in the frontal region, are common in dengue fever."
+    },
+    "q3": {
+      "question": "Are you experiencing pain behind the eyes (retro-orbital pain)?",
+      "description": "Pain behind or around the eyes, especially when moving them, is a characteristic symptom of dengue."
+    },
+    "q4": {
+      "question": "Are you experiencing severe joint and bone pain?",
+      "description": "Dengue is sometimes called \"breakbone fever\" due to severe joint and bone pain."
+    },
+    "q5": {
+      "question": "Do you have severe muscle pain (myalgia)?",
+      "description": "Widespread muscle pain and body aches are typical in dengue infection."
+    },
+    "q6": {
+      "question": "Have you developed a skin rash?",
+      "description": "A maculopapular rash may appear 2-5 days after fever onset, typically on the trunk and spreading to limbs."
+    },
+    "q7": {
+      "question": "Are you experiencing nausea or vomiting?",
+      "description": "Gastrointestinal symptoms like nausea and vomiting are common in dengue."
+    },
+    "q8": {
+      "question": "Are you experiencing extreme fatigue or weakness?",
+      "description": "Profound fatigue and weakness can persist even after other symptoms improve."
+    },
+    "q9": {
+      "question": "Have you experienced loss of appetite?",
+      "description": "Reduced appetite is common during dengue infection."
+    },
+    "q10": {
+      "question": "Are you experiencing abdominal pain or tenderness?",
+      "description": "Severe or persistent abdominal pain can be a warning sign of severe dengue."
+    },
+    "q11": {
+      "question": "Do you have persistent vomiting (unable to keep fluids down)?",
+      "description": "Persistent vomiting is a warning sign that may indicate progression to severe dengue."
+    },
+    "q12": {
+      "question": "Have you noticed any unusual bleeding (nose, gums, bruising)?",
+      "description": "Minor bleeding manifestations like nosebleeds, gum bleeding, or easy bruising can occur."
+    },
+    "q13": {
+      "question": "Are you experiencing difficulty breathing or rapid breathing?",
+      "description": "Respiratory distress can indicate severe dengue requiring immediate medical attention."
+    },
+    "q14": {
+      "question": "Do you have bleeding gums or blood in saliva?",
+      "description": "Bleeding from gums is a common manifestation of dengue hemorrhagic complications."
+    },
+    "q15": {
+      "question": "Are you experiencing restlessness, irritability, or altered mental state?",
+      "description": "Changes in mental status or consciousness can indicate severe complications."
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "common": {
+    "dengueExpert": "DengueExpert",
+    "diagnosticSystem": "Sistem Diagnostik",
+    "medicalExpertSystem": "Sistem Pakar Medis",
+    "loading": "Memuat...",
+    "error": "Error",
+    "success": "Berhasil",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "save": "Simpan",
+    "edit": "Edit",
+    "close": "Tutup",
+    "confirm": "Konfirmasi",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "submit": "Kirim",
+    "search": "Cari",
+    "filter": "Filter"
+  },
+  "nav": {
+    "home": "Beranda",
+    "login": "Masuk",
+    "getStarted": "Mulai",
+    "dashboard": "Dasbor",
+    "history": "Riwayat",
+    "logout": "Keluar",
+    "testHistory": "Riwayat Tes",
+    "startTest": "Mulai Tes"
+  },
+  "landing": {
+    "hero": {
+      "title": "Diagnostik Demam Berdarah",
+      "titleHighlight": "Sistem Pakar",
+      "subtitle": "Sistem diagnostik bertenaga AI menggunakan metodologi faktor kepastian untuk menilai gejala demam berdarah dan memberikan rekomendasi medis berbasis bukti.",
+      "startDiagnosis": "Mulai Diagnosis",
+      "signIn": "Masuk"
+    },
+    "stats": {
+      "questions": "15+",
+      "questionsLabel": "Pertanyaan Diagnostik",
+      "accuracy": "95%",
+      "accuracyLabel": "Tingkat Akurasi",
+      "time": "<5menit",
+      "timeLabel": "Waktu Penilaian"
+    },
+    "features": {
+      "title": "Mengapa Memilih DengueExpert?",
+      "subtitle": "Sistem pakar kami menggabungkan pengetahuan medis dengan algoritma AI canggih untuk memberikan penilaian yang akurat.",
+      "aiPowered": "Diagnosis Bertenaga AI",
+      "aiPoweredDesc": "Metode faktor kepastian canggih menganalisis gejala Anda dengan presisi medis.",
+      "comprehensive": "Penilaian Komprehensif",
+      "comprehensiveDesc": "Kuesioner terperinci mencakup semua gejala demam berdarah dan tanda peringatan.",
+      "confidence": "Skor Keyakinan",
+      "confidenceDesc": "Dapatkan skor faktor kepastian yang jelas menunjukkan probabilitas infeksi dengue.",
+      "quickResults": "Hasil Cepat",
+      "quickResultsDesc": "Terima hasil diagnostik instan dengan rekomendasi medis yang dapat ditindaklanjuti.",
+      "privacyFirst": "Privasi Utama",
+      "privacyFirstDesc": "Data kesehatan Anda disimpan dengan aman dan privat di perangkat Anda.",
+      "trackHistory": "Lacak Riwayat",
+      "trackHistoryDesc": "Pantau riwayat tes Anda dan lacak gejala dari waktu ke waktu."
+    },
+    "howItWorks": {
+      "title": "Cara Kerja",
+      "subtitle": "Proses 3 langkah sederhana untuk mendapatkan penilaian diagnostik Anda",
+      "step1": "Jawab Pertanyaan",
+      "step1Desc": "Lengkapi kuesioner gejala komprehensif kami",
+      "step2": "Analisis AI",
+      "step2Desc": "Sistem kami menghitung faktor kepastian menggunakan aturan pakar",
+      "step3": "Dapatkan Hasil",
+      "step3Desc": "Terima diagnosis terperinci dengan rekomendasi medis"
+    },
+    "disclaimer": {
+      "title": "Penafian Medis",
+      "content": "Sistem pakar ini dirancang untuk membantu dalam penilaian awal saja. Ini bukan pengganti nasihat medis profesional, diagnosis, atau perawatan. Selalu cari nasihat dari penyedia layanan kesehatan yang berkualitas dengan pertanyaan apa pun mengenai kondisi medis. Dalam kasus darurat atau gejala parah, cari perhatian medis segera."
+    },
+    "cta": {
+      "title": "Siap untuk Memulai?",
+      "subtitle": "Ambil langkah pertama untuk memahami gejala Anda",
+      "button": "Mulai Diagnosis Sekarang"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Selamat Datang Kembali",
+      "subtitle": "Masuk untuk mengakses dasbor diagnostik Anda",
+      "email": "Email",
+      "password": "Kata Sandi",
+      "forgotPassword": "Lupa kata sandi?",
+      "signIn": "Masuk",
+      "signingIn": "Masuk...",
+      "orContinue": "Atau lanjutkan dengan",
+      "google": "Google",
+      "noAccount": "Belum punya akun?",
+      "signUp": "Daftar"
+    },
+    "register": {
+      "title": "Buat Akun",
+      "subtitle": "Bergabunglah dengan DengueExpert untuk mengakses penilaian diagnostik",
+      "fullName": "Nama Lengkap",
+      "email": "Email",
+      "dateOfBirth": "Tanggal Lahir",
+      "password": "Kata Sandi",
+      "confirmPassword": "Konfirmasi Kata Sandi",
+      "createAccount": "Buat Akun",
+      "creatingAccount": "Membuat akun...",
+      "orContinue": "Atau lanjutkan dengan",
+      "google": "Google",
+      "haveAccount": "Sudah punya akun?",
+      "signIn": "Masuk"
+    },
+    "messages": {
+      "loginSuccess": "Login berhasil!",
+      "loginFailed": "Login gagal",
+      "checkCredentials": "Periksa email dan kata sandi Anda",
+      "welcomeBack": "Selamat datang kembali di DengueExpert",
+      "registerSuccess": "Pendaftaran berhasil!",
+      "registerFailed": "Pendaftaran gagal",
+      "tryAgain": "Silakan coba lagi",
+      "accountCreated": "Akun Anda telah dibuat",
+      "welcome": "Selamat datang di DengueExpert",
+      "logoutSuccess": "Berhasil keluar",
+      "fillAllFields": "Harap isi semua kolom",
+      "passwordMismatch": "Kata sandi tidak cocok",
+      "passwordTooShort": "Kata sandi harus minimal 6 karakter",
+      "googleAuth": "Masuk dengan Google",
+      "googleAuthMocked": "Autentikasi Google dipalsukan dalam demo ini",
+      "passwordReset": "Reset Kata Sandi",
+      "passwordResetMocked": "Fitur ini dipalsukan dalam demo"
+    }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Selamat Pagi",
+      "afternoon": "Selamat Siang",
+      "evening": "Selamat Malam"
+    },
+    "welcome": "Selamat datang di dasbor diagnostik DengueExpert Anda",
+    "stats": {
+      "totalTests": "Total Tes",
+      "totalTestsDesc": "Semua penilaian waktu",
+      "lastAssessment": "Penilaian Terakhir",
+      "lastAssessmentDesc": "Tes terbaru",
+      "noTests": "Belum ada tes",
+      "averageCF": "Rata-rata CF",
+      "averageCFDesc": "Rata-rata faktor kepastian",
+      "na": "T/A"
+    },
+    "quickActions": {
+      "title": "Tindakan Cepat",
+      "startNew": "Mulai Penilaian Baru",
+      "startNewDesc": "Mulai tes diagnostik demam berdarah baru",
+      "viewHistory": "Lihat Riwayat Tes",
+      "viewHistoryDesc": "Tinjau penilaian dan hasil sebelumnya"
+    },
+    "recentAssessments": {
+      "title": "Penilaian Terbaru",
+      "noAssessments": "Belum ada penilaian",
+      "noAssessmentsDesc": "Mulai tes diagnostik pertama Anda untuk melacak kesehatan Anda",
+      "startAssessment": "Mulai Penilaian",
+      "viewDetails": "Lihat Detail",
+      "viewAll": "Lihat Semua",
+      "certaintyFactor": "Faktor Kepastian"
+    }
+  },
+  "test": {
+    "title": "Penilaian Diagnostik",
+    "subtitle": "Jawab semua pertanyaan dengan akurat untuk diagnosis terbaik",
+    "progress": {
+      "question": "Pertanyaan {{current}} dari {{total}}",
+      "complete": "{{percent}}% Selesai"
+    },
+    "navigation": {
+      "previous": "Sebelumnya",
+      "next": "Pertanyaan Selanjutnya",
+      "submit": "Kirim Penilaian",
+      "submitting": "Mengirim..."
+    },
+    "messages": {
+      "selectAnswer": "Silakan pilih jawaban untuk melanjutkan",
+      "completed": "Penilaian selesai!",
+      "calculatingResults": "Menghitung hasil Anda..."
+    },
+    "categories": {
+      "primarySymptoms": "Gejala Utama",
+      "secondarySymptoms": "Gejala Sekunder",
+      "warningSigns": "Tanda Peringatan",
+      "severeWarningSigns": "Tanda Peringatan Parah"
+    }
+  },
+  "result": {
+    "title": "Hasil Diagnostik",
+    "completedOn": "Diselesaikan pada {{date}}",
+    "risk": "Risiko",
+    "certaintyFactor": {
+      "title": "Faktor Kepastian",
+      "description": "Skor keyakinan diagnostik keseluruhan",
+      "range": "Rentang: -1.0 hingga +1.0",
+      "indicates": "Faktor kepastian {{cf}} menunjukkan probabilitas {{level}} demam berdarah berdasarkan gejala Anda."
+    },
+    "confidenceLevel": {
+      "title": "Tingkat Keyakinan",
+      "description": "Keandalan penilaian",
+      "based": "Penilaian ini didasarkan pada {{count}} pertanyaan yang dijawab menggunakan metodologi faktor kepastian."
+    },
+    "recommendations": {
+      "title": "Rekomendasi Medis",
+      "description": "Langkah selanjutnya berdasarkan penilaian Anda",
+      "urgentAction": "Tindakan Mendesak Diperlukan",
+      "urgentDesc": "Gejala Anda menunjukkan kondisi yang berpotensi serius. Harap cari perhatian medis segera di departemen darurat terdekat atau hubungi layanan darurat.",
+      "consultation": "Konsultasi Medis Disarankan",
+      "consultationDesc": "Jadwalkan janji dengan penyedia layanan kesehatan segera. Gejala Anda memerlukan evaluasi medis profesional dan mungkin tes laboratorium.",
+      "lowRisk": "Penilaian Risiko Rendah",
+      "lowRiskDesc": "Gejala Anda menunjukkan probabilitas rendah demam berdarah. Lanjutkan memantau kesehatan Anda dan konsultasikan dengan penyedia layanan kesehatan jika gejala memburuk atau gejala baru muncul.",
+      "generalAdvice": "Nasihat Umum:",
+      "advice1": "Tetap terhidrasi - minum banyak cairan",
+      "advice2": "Dapatkan istirahat yang cukup dan hindari aktivitas berat",
+      "advice3": "Pantau suhu dan gejala Anda secara teratur",
+      "advice4": "Hindari paparan nyamuk menggunakan penolak dan pakaian pelindung",
+      "advice5": "Jangan mengobati sendiri dengan aspirin atau NSAID - konsultasikan dengan dokter"
+    },
+    "symptomSummary": {
+      "title": "Ringkasan Gejala",
+      "description": "Tanggapan Anda terhadap pertanyaan diagnostik"
+    },
+    "actions": {
+      "backToDashboard": "Kembali ke Dasbor",
+      "takeNewTest": "Ambil Tes Baru",
+      "downloadReport": "Unduh Laporan"
+    },
+    "disclaimer": {
+      "important": "Penting:",
+      "text": "Sistem pakar ini menyediakan penilaian awal saja dan bukan pengganti diagnosis medis profesional. Selalu konsultasikan dengan penyedia layanan kesehatan yang berkualitas untuk nasihat medis dan perawatan."
+    },
+    "messages": {
+      "testNotFound": "Tes tidak ditemukan",
+      "downloadReport": "Unduh Laporan",
+      "downloadMocked": "Fitur unduh PDF dipalsukan dalam demo ini"
+    }
+  },
+  "history": {
+    "title": "Riwayat Tes",
+    "subtitle": "Lihat dan kelola penilaian diagnostik Anda",
+    "clearAll": "Hapus Semua",
+    "search": "Cari berdasarkan diagnosis, tingkat risiko, atau tanggal...",
+    "totalTests": "Total Tes",
+    "noHistory": "Tidak ada riwayat tes",
+    "noHistoryDesc": "Mulai penilaian diagnostik pertama Anda untuk melihat riwayat Anda di sini",
+    "noResults": "Tidak ada hasil ditemukan",
+    "noResultsDesc": "Coba sesuaikan istilah pencarian Anda",
+    "startAssessment": "Mulai Penilaian",
+    "viewDetails": "Lihat Detail",
+    "dialog": {
+      "deleteOne": "Hapus Tes?",
+      "deleteOneDesc": "Ini akan menghapus hasil tes ini secara permanen. Tindakan ini tidak dapat dibatalkan.",
+      "deleteAll": "Hapus Semua Tes?",
+      "deleteAllDesc": "Ini akan menghapus semua riwayat tes Anda secara permanen. Tindakan ini tidak dapat dibatalkan.",
+      "deleteButton": "Hapus",
+      "deleteAllButton": "Hapus Semua"
+    },
+    "messages": {
+      "deleteSuccess": "Tes berhasil dihapus",
+      "deleteFailed": "Gagal menghapus tes",
+      "clearSuccess": "Semua tes dihapus"
+    }
+  },
+  "diagnosis": {
+    "severeTitle": "Dengue Parah - Perhatian Medis Segera Diperlukan",
+    "severeRec": "Cari perawatan medis darurat segera. Anda menunjukkan indikator kuat demam berdarah parah dengan komplikasi yang berpotensi mengancam jiwa.",
+    "highTitle": "Kemungkinan Demam Berdarah",
+    "highRec": "Konsultasikan dengan penyedia layanan kesehatan segera. Anda menampilkan gejala signifikan yang konsisten dengan demam berdarah. Intervensi medis dini sangat penting.",
+    "moderateTitle": "Kemungkinan Demam Berdarah",
+    "moderateRec": "Jadwalkan konsultasi medis. Gejala Anda menunjukkan kemungkinan infeksi dengue. Tes laboratorium direkomendasikan untuk konfirmasi.",
+    "lowTitle": "Probabilitas Rendah Dengue",
+    "lowRec": "Pantau gejala Anda. Meskipun dengue kurang kemungkinan, lanjutkan mengamati kesehatan Anda dan konsultasikan dengan dokter jika gejala memburuk.",
+    "minimalTitle": "Tidak Mungkin Dengue",
+    "minimalRec": "Demam berdarah tidak mungkin berdasarkan gejala Anda. Namun, jika Anda memiliki kekhawatiran kesehatan, pertimbangkan untuk berkonsultasi dengan penyedia layanan kesehatan.",
+    "noneTitle": "Dengue Tidak Terindikasi",
+    "noneRec": "Gejala Anda tidak menunjukkan demam berdarah. Jika Anda memiliki kekhawatiran kesehatan lain, silakan konsultasikan dengan profesional kesehatan."
+  },
+  "questions": {
+    "optYes": "Ya",
+    "optNo": "Tidak",
+    "q1": {
+      "question": "Apakah Anda mengalami demam tinggi mendadak (di atas 38,5°C atau 101,3°F)?",
+      "description": "Dengue biasanya dimulai dengan onset mendadak demam tinggi yang dapat berlangsung 2-7 hari."
+    },
+    "q2": {
+      "question": "Apakah Anda mengalami sakit kepala parah?",
+      "description": "Sakit kepala intens, terutama di daerah frontal, umum terjadi pada demam berdarah."
+    },
+    "q3": {
+      "question": "Apakah Anda mengalami nyeri di belakang mata (nyeri retro-orbital)?",
+      "description": "Nyeri di belakang atau di sekitar mata, terutama saat menggerakkannya, adalah gejala khas dengue."
+    },
+    "q4": {
+      "question": "Apakah Anda mengalami nyeri sendi dan tulang yang parah?",
+      "description": "Dengue kadang-kadang disebut \"demam tulang patah\" karena nyeri sendi dan tulang yang parah."
+    },
+    "q5": {
+      "question": "Apakah Anda mengalami nyeri otot parah (mialgia)?",
+      "description": "Nyeri otot yang menyebar dan pegal badan khas pada infeksi dengue."
+    },
+    "q6": {
+      "question": "Apakah Anda mengalami ruam kulit?",
+      "description": "Ruam makulopapular dapat muncul 2-5 hari setelah onset demam, biasanya di batang tubuh dan menyebar ke tungkai."
+    },
+    "q7": {
+      "question": "Apakah Anda mengalami mual atau muntah?",
+      "description": "Gejala gastrointestinal seperti mual dan muntah umum terjadi pada dengue."
+    },
+    "q8": {
+      "question": "Apakah Anda mengalami kelelahan atau kelemahan ekstrem?",
+      "description": "Kelelahan dan kelemahan yang mendalam dapat bertahan bahkan setelah gejala lain membaik."
+    },
+    "q9": {
+      "question": "Apakah Anda mengalami kehilangan nafsu makan?",
+      "description": "Nafsu makan berkurang umum terjadi selama infeksi dengue."
+    },
+    "q10": {
+      "question": "Apakah Anda mengalami nyeri atau nyeri tekan perut?",
+      "description": "Nyeri perut yang parah atau persisten dapat menjadi tanda peringatan dengue parah."
+    },
+    "q11": {
+      "question": "Apakah Anda mengalami muntah persisten (tidak bisa menahan cairan)?",
+      "description": "Muntah persisten adalah tanda peringatan yang dapat menunjukkan perkembangan ke dengue parah."
+    },
+    "q12": {
+      "question": "Apakah Anda melihat pendarahan yang tidak biasa (hidung, gusi, memar)?",
+      "description": "Manifestasi pendarahan minor seperti mimisan, pendarahan gusi, atau mudah memar dapat terjadi."
+    },
+    "q13": {
+      "question": "Apakah Anda mengalami kesulitan bernapas atau bernapas cepat?",
+      "description": "Kesulitan pernapasan dapat menunjukkan dengue parah yang memerlukan perhatian medis segera."
+    },
+    "q14": {
+      "question": "Apakah Anda mengalami pendarahan gusi atau darah di air liur?",
+      "description": "Pendarahan dari gusi adalah manifestasi umum dari komplikasi hemoragik dengue."
+    },
+    "q15": {
+      "question": "Apakah Anda mengalami kegelisahan, iritabilitas, atau perubahan status mental?",
+      "description": "Perubahan status mental atau kesadaran dapat menunjukkan komplikasi parah."
+    }
+  }
+}
