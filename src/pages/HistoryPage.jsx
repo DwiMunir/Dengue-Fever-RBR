@@ -33,11 +33,14 @@ import { getSeverityInfo } from '@/utils/ruleBasedReasoning';
 import { toast } from 'sonner';
 import { AnimatedPage, FadeIn, StaggerContainer, StaggerItem, cardHoverVariants } from '@/components/AnimatedPage';
 import TestHistoryCard from '@/components/TestHistoryCard';
+import useDebounce from '@/hooks/useDebounce';
 
 export default function HistoryPage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
+
+  const debouncedSearch = useDebounce(searchTerm, 300);
   
   const { data: testsData, isLoading, error, refetch } = useTests();
   const deleteTestMutation = useDeleteTest();
@@ -45,13 +48,13 @@ export default function HistoryPage() {
   const tests = testsData || [];
 
   const filteredTests = useMemo(() => {
-    if (!searchTerm) return tests;
+    if (!debouncedSearch) return tests;
     
-    const filtered = tests.filter(test => {
+    const searchLower = debouncedSearch.toLowerCase();
+    return tests.filter(test => {
       const diagnosis = test.diagnosed_disease || '';
       const patientName = test.patient_name || '';
       const patientCode = test.patient_code || '';
-      const searchLower = searchTerm.toLowerCase();
       return (
         diagnosis.toLowerCase().includes(searchLower) ||
         patientName.toLowerCase().includes(searchLower) ||
@@ -59,8 +62,7 @@ export default function HistoryPage() {
         dayjs(test.checkup_at).format('DD/MM/YYYY').includes(searchLower)
       );
     });
-    return filtered;
-  }, [searchTerm, tests]);
+  }, [debouncedSearch, tests]);
 
   const handleDelete = (id) => {
     deleteTestMutation.mutate(id, {
@@ -157,7 +159,7 @@ export default function HistoryPage() {
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button variant="destructive" className="shadow-lg shadow-destructive/25">
+                      <Button variant="destructive" className="shadow-lg shadow-destructive/25 hidden">
                         <Trash2 className="mr-2 h-4 w-4" />
                         {t('history.clearAll')}
                       </Button>
@@ -261,9 +263,9 @@ export default function HistoryPage() {
             </motion.div>
           </FadeIn>
         ) : (
-          <StaggerContainer className="space-y-4">
-            <AnimatePresence>
-              {filteredTests.map((test) => (
+          <AnimatePresence mode="sync">
+            <StaggerContainer className="space-y-4" key={debouncedSearch}>
+              {filteredTests.map((test, index) => (
                 <StaggerItem key={test.id}>
                   <TestHistoryCard 
                     test={test} 
@@ -273,8 +275,8 @@ export default function HistoryPage() {
                   />
                 </StaggerItem>
               ))}
-            </AnimatePresence>
-          </StaggerContainer>
+            </StaggerContainer>
+          </AnimatePresence>
         )}
       </div>
     </AnimatedPage>

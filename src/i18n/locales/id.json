@@ -16,7 +16,11 @@
     "next": "Selanjutnya",
     "submit": "Kirim",
     "search": "Cari",
-    "filter": "Filter"
+    "filter": "Filter",
+    "madeWith": "Dibuat oleh Kelompok 1",
+    "forBetterHealth": "untuk kesehatan yang lebih baik",
+    "poweredBy": "Didukung oleh",
+    "ruleBasedExpertSystem": "Sistem Pakar Berbasis Aturan"
   },
   "nav": {
     "home": "Beranda",
@@ -32,27 +36,28 @@
     "hero": {
       "title": "Diagnostik Demam Berdarah",
       "titleHighlight": "Sistem Pakar",
-      "subtitle": "Sistem diagnostik bertenaga AI menggunakan metodologi faktor kepastian untuk menilai gejala demam berdarah dan memberikan rekomendasi medis berbasis bukti.",
+      "subtitle": "Sistem pakar Rule-Based Reasoning menggunakan metodologi forward chaining untuk menilai gejala demam berdarah dan memberikan rekomendasi medis berbasis bukti.",
       "startDiagnosis": "Mulai Diagnosis",
       "signIn": "Masuk"
     },
     "stats": {
       "questions": "15+",
       "questionsLabel": "Pertanyaan Diagnostik",
-      "accuracy": "95%",
-      "accuracyLabel": "Tingkat Akurasi",
+      "rules": "20+",
+      "rulesLabel": "Aturan Pakar",
       "time": "<5menit",
       "timeLabel": "Waktu Penilaian"
     },
     "features": {
+      "badge": "Fitur",
       "title": "Mengapa Memilih DengueExpert?",
-      "subtitle": "Sistem pakar kami menggabungkan pengetahuan medis dengan algoritma AI canggih untuk memberikan penilaian yang akurat.",
-      "aiPowered": "Diagnosis Bertenaga AI",
-      "aiPoweredDesc": "Metode faktor kepastian canggih menganalisis gejala Anda dengan presisi medis.",
+      "subtitle": "Sistem pakar kami menggabungkan pengetahuan medis dengan penalaran berbasis aturan untuk memberikan penilaian yang akurat.",
+      "ruleBased": "Diagnosis Berbasis Aturan",
+      "ruleBasedDesc": "Aturan pakar yang berasal dari pengetahuan medis menganalisis gejala Anda secara sistematis.",
       "comprehensive": "Penilaian Komprehensif",
       "comprehensiveDesc": "Kuesioner terperinci mencakup semua gejala demam berdarah dan tanda peringatan.",
-      "confidence": "Skor Keyakinan",
-      "confidenceDesc": "Dapatkan skor faktor kepastian yang jelas menunjukkan probabilitas infeksi dengue.",
+      "forwardChaining": "Logika Forward Chaining",
+      "forwardChainingDesc": "Penalaran progresif melalui pola gejala untuk mencapai kesimpulan yang akurat.",
       "quickResults": "Hasil Cepat",
       "quickResultsDesc": "Terima hasil diagnostik instan dengan rekomendasi medis yang dapat ditindaklanjuti.",
       "privacyFirst": "Privasi Utama",
@@ -61,12 +66,13 @@
       "trackHistoryDesc": "Pantau riwayat tes Anda dan lacak gejala dari waktu ke waktu."
     },
     "howItWorks": {
+      "badge": "Cara Kerja",
       "title": "Cara Kerja",
       "subtitle": "Proses 3 langkah sederhana untuk mendapatkan penilaian diagnostik Anda",
       "step1": "Jawab Pertanyaan",
       "step1Desc": "Lengkapi kuesioner gejala komprehensif kami",
-      "step2": "Analisis AI",
-      "step2Desc": "Sistem kami menghitung faktor kepastian menggunakan aturan pakar",
+      "step2": "Analisis Aturan",
+      "step2Desc": "Sistem menerapkan aturan pakar menggunakan metode forward chaining",
       "step3": "Dapatkan Hasil",
       "step3Desc": "Terima diagnosis terperinci dengan rekomendasi medis"
     },
@@ -79,6 +85,9 @@
       "subtitle": "Ambil langkah pertama untuk memahami gejala Anda",
       "button": "Mulai Diagnosis Sekarang"
     }
+  },
+  "footer": {
+    "description": "Sistem pakar Rule-Based Reasoning untuk mendiagnosis gejala demam berdarah dengan rekomendasi medis berbasis bukti menggunakan metodologi forward chaining."
   },
   "auth": {
     "login": {

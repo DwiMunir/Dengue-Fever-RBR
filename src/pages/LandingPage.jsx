@@ -16,7 +16,7 @@ import {
 } from '@/components/AnimatedPage';
 import { 
   Activity, 
-  Brain, 
+  BookOpen, 
   ClipboardCheck, 
   Shield, 
   Clock, 
@@ -25,7 +25,8 @@ import {
   AlertCircle,
   Sparkles,
   Zap,
-  ArrowDown
+  ArrowDown,
+  GitBranch
 } from 'lucide-react';
 import { isAuthenticated } from '@/utils/localStorage';
 
@@ -47,9 +48,9 @@ export default function LandingPage() {
 
   const features = [
     {
-      icon: Brain,
-      title: t('landing.features.aiPowered'),
-      description: t('landing.features.aiPoweredDesc'),
+      icon: BookOpen,
+      title: t('landing.features.ruleBased'),
+      description: t('landing.features.ruleBasedDesc'),
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
@@ -59,9 +60,9 @@ export default function LandingPage() {
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: TrendingUp,
-      title: t('landing.features.confidence'),
-      description: t('landing.features.confidenceDesc'),
+      icon: GitBranch,
+      title: t('landing.features.forwardChaining'),
+      description: t('landing.features.forwardChainingDesc'),
       gradient: 'from-violet-500 to-purple-500'
     },
     {
@@ -86,7 +87,7 @@ export default function LandingPage() {
 
   const stats = [
     { value: t('landing.stats.questions'), label: t('landing.stats.questionsLabel'), icon: ClipboardCheck },
-    { value: t('landing.stats.accuracy'), label: t('landing.stats.accuracyLabel'), icon: Zap },
+    { value: t('landing.stats.rules'), label: t('landing.stats.rulesLabel'), icon: GitBranch },
     { value: t('landing.stats.time'), label: t('landing.stats.timeLabel'), icon: Clock }
   ];
 
@@ -264,7 +265,7 @@ export default function LandingPage() {
             <div className="mb-16 text-center lg:mb-20">
               <Badge className="mb-5 gap-2 bg-secondary/10 text-secondary" variant="outline">
                 <Zap className="h-4 w-4" />
-                Features
+                {t('landing.features.badge')}
               </Badge>
               <h2 className="mb-5 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
                 {t('landing.features.title')}
@@ -321,7 +322,7 @@ export default function LandingPage() {
             <div className="mb-16 text-center lg:mb-20">
               <Badge className="mb-5 gap-2 bg-accent/10 text-accent" variant="outline">
                 <Activity className="h-4 w-4" />
-                How It Works
+                {t('landing.howItWorks.badge')}
               </Badge>
               <h2 className="mb-5 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
                 {t('landing.howItWorks.title')}

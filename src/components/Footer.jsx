@@ -74,8 +74,7 @@ export const Footer = () => {
               </div>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Advanced AI-powered diagnostic system helping identify dengue fever symptoms 
-              with evidence-based medical recommendations.
+              {t('footer.description')}
             </p>
             
             {/* Social Links */}
@@ -101,15 +100,15 @@ export const Footer = () => {
             <div className="mt-8 space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">support@dengueexpert.com</span>
+                <span className="text-sm text-muted-foreground">support@dengue-fever.umby.dev</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">+62 21 1234 5678</span>
+                <span className="text-sm text-muted-foreground">+62 895384046096</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">Jakarta, Indonesia</span>
+                <span className="text-sm text-muted-foreground">Yogyakarta, Indonesia</span>
               </div>
             </div>
           </div>
@@ -184,13 +183,13 @@ export const Footer = () => {
             <p className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
               <span>© {currentYear} DengueExpert.</span>
               <span className="flex items-center gap-1">
-                Made with 
+                {t('common.madeWith')}
                 <Heart className="h-4 w-4 fill-red-500 text-red-500" /> 
-                for better health.
+                {t('common.forBetterHealth')}.
               </span>
             </p>
             <p className="text-sm text-muted-foreground">
-              Powered by <span className="font-semibold text-primary">Rule-Based Expert System</span>
+              {t('common.poweredBy')} <span className="font-semibold text-primary">{t('common.ruleBasedExpertSystem')}</span>
             </p>
           </div>
         </div>

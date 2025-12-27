@@ -16,7 +16,11 @@
     "next": "Next",
     "submit": "Submit",
     "search": "Search",
-    "filter": "Filter"
+    "filter": "Filter",
+    "madeWith": "Made by Group 1",
+    "forBetterHealth": "for better health",
+    "poweredBy": "Powered by",
+    "ruleBasedExpertSystem": "Rule-Based Expert System"
   },
   "nav": {
     "home": "Home",
@@ -32,27 +36,28 @@
     "hero": {
       "title": "Dengue Fever Diagnostic",
       "titleHighlight": "Expert System",
-      "subtitle": "Advanced AI-powered diagnostic system using certainty factor methodology to assess dengue fever symptoms and provide evidence-based medical recommendations.",
+      "subtitle": "Rule-Based Reasoning expert system using forward chaining methodology to assess dengue fever symptoms and provide evidence-based medical recommendations.",
       "startDiagnosis": "Start Diagnosis",
       "signIn": "Sign In"
     },
     "stats": {
       "questions": "15+",
       "questionsLabel": "Diagnostic Questions",
-      "accuracy": "95%",
-      "accuracyLabel": "Accuracy Rate",
+      "rules": "20+",
+      "rulesLabel": "Expert Rules",
       "time": "<5min",
       "timeLabel": "Assessment Time"
     },
     "features": {
+      "badge": "Features",
       "title": "Why Choose DengueExpert?",
-      "subtitle": "Our expert system combines medical knowledge with advanced AI algorithms to provide accurate assessments.",
-      "aiPowered": "AI-Powered Diagnosis",
-      "aiPoweredDesc": "Advanced certainty factor method analyzes your symptoms with medical precision.",
+      "subtitle": "Our expert system combines medical knowledge with rule-based reasoning to provide accurate assessments.",
+      "ruleBased": "Rule-Based Diagnosis",
+      "ruleBasedDesc": "Expert rules derived from medical knowledge analyze your symptoms systematically.",
       "comprehensive": "Comprehensive Assessment",
       "comprehensiveDesc": "Detailed questionnaire covering all dengue fever symptoms and warning signs.",
-      "confidence": "Confidence Scoring",
-      "confidenceDesc": "Get clear certainty factor scores showing probability of dengue infection.",
+      "forwardChaining": "Forward Chaining Logic",
+      "forwardChainingDesc": "Progressive reasoning through symptom patterns to reach accurate conclusions.",
       "quickResults": "Quick Results",
       "quickResultsDesc": "Receive instant diagnostic results with actionable medical recommendations.",
       "privacyFirst": "Privacy First",
@@ -61,12 +66,13 @@
       "trackHistoryDesc": "Monitor your test history and track symptoms over time."
     },
     "howItWorks": {
+      "badge": "How It Works",
       "title": "How It Works",
       "subtitle": "Simple 3-step process to get your diagnostic assessment",
       "step1": "Answer Questions",
       "step1Desc": "Complete our comprehensive symptom questionnaire",
-      "step2": "AI Analysis",
-      "step2Desc": "Our system calculates certainty factors using expert rules",
+      "step2": "Rule Analysis",
+      "step2Desc": "System applies expert rules using forward chaining method",
       "step3": "Get Results",
       "step3Desc": "Receive detailed diagnosis with medical recommendations"
     },
@@ -79,6 +85,9 @@
       "subtitle": "Take the first step towards understanding your symptoms",
       "button": "Begin Diagnosis Now"
     }
+  },
+  "footer": {
+    "description": "Rule-Based Reasoning expert system for diagnosing dengue fever symptoms with evidence-based medical recommendations using forward chaining methodology."
   },
   "auth": {
     "login": {
