@@ -380,3 +380,18 @@ html {
 .animate-pulse-subtle {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+@media (max-width: 640px) {
+    .shadow-md {
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1);
+    }
+    .shadow-lg {
+        box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.12);
+    }
+    .shadow-xl {
+        box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.14);
+    }
+    .shadow-2xl {
+        box-shadow: 0 14px 32px -12px rgba(0, 0, 0, 0.16);
+    }
+}

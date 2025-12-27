@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -19,9 +19,13 @@ import {
   Mail
 } from 'lucide-react';
 import { CONTACT_INFO } from '@/config/contactInfo';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export default function CookiePolicyPage() {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const shouldReduceMotion = prefersReducedMotion || isMobile;
 
   const sections = [
     {
@@ -112,16 +116,16 @@ export default function CookiePolicyPage() {
               return (
                 <StaggerItem key={index}>
                   <motion.div
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    whileHover={shouldReduceMotion ? undefined : { scale: 1.01 }}
+                    transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                   >
                     <Card className="border border-border/50 bg-card/80 backdrop-blur-sm transition-colors hover:border-primary/50">
                       <CardContent className="p-6">
                         <div className="mb-4 flex items-center gap-3">
                           <motion.div
                             className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${section.gradient}`}
-                            whileHover={{ rotate: 10 }}
-                            transition={{ type: "spring", stiffness: 300 }}
+                            whileHover={shouldReduceMotion ? undefined : { rotate: 10 }}
+                            transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                           >
                             <Icon className="h-5 w-5 text-white" />
                           </motion.div>

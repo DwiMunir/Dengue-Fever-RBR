@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,9 +23,13 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { CONTACT_INFO, getLocalizedContactInfo } from '@/config/contactInfo';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export default function ContactPage() {
   const { t, i18n } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const shouldReduceMotion = prefersReducedMotion || isMobile;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -111,16 +115,16 @@ export default function ContactPage() {
                   return (
                     <StaggerItem key={index}>
                       <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+                        transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                       >
                         <Card className="border border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/50 transition-colors">
                           <CardContent className="p-6">
                             <div className="flex items-start gap-4">
                               <motion.div
                                 className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${info.gradient}`}
-                                whileHover={{ rotate: 10 }}
-                                transition={{ type: "spring", stiffness: 300 }}
+                                whileHover={shouldReduceMotion ? undefined : { rotate: 10 }}
+                                transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                               >
                                 <Icon className="h-6 w-6 text-white" />
                               </motion.div>
@@ -145,7 +149,7 @@ export default function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
+                transition={shouldReduceMotion ? undefined : { delay: 0.5 }}
                 className="mt-6"
               >
                 <Card className="border-0 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
@@ -227,8 +231,8 @@ export default function ContactPage() {
                       />
                     </div>
                     <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+                      whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                     >
                       <Button
                         type="submit"

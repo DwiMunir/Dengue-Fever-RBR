@@ -1,4 +1,31 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import useIsMobile from '@/hooks/useIsMobile';
+
+const useMotionSettings = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const shouldReduceMotion = prefersReducedMotion || isMobile;
+
+  return {
+    shouldReduceMotion,
+    durations: {
+      page: shouldReduceMotion ? 0.18 : 0.5,
+      fade: shouldReduceMotion ? 0.2 : 0.6,
+      item: shouldReduceMotion ? 0.2 : 0.5,
+      hover: shouldReduceMotion ? 0.15 : 0.3,
+    },
+    offsets: {
+      pageY: shouldReduceMotion ? 4 : 20,
+      exitY: shouldReduceMotion ? -4 : -15,
+      fadeY: shouldReduceMotion ? 8 : 30,
+      itemY: shouldReduceMotion ? 6 : 25,
+    },
+    stagger: {
+      children: shouldReduceMotion ? 0.02 : 0.08,
+      delay: shouldReduceMotion ? 0.02 : 0.1,
+    },
+  };
+};
 
 // Page transition variants
 export const pageVariants = {
@@ -159,9 +186,36 @@ export const pulseVariants = {
 
 // Animated page wrapper
 export const AnimatedPage = ({ children, className = '' }) => {
+  const { durations, offsets } = useMotionSettings();
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: offsets.pageY,
+      scale: 0.98
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: durations.page,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: offsets.exitY,
+      scale: 0.98,
+      transition: {
+        duration: durations.hover,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    }
+  };
+
   return (
     <motion.div
-      variants={pageVariants}
+      variants={variants}
       initial="initial"
       animate="animate"
       exit="exit"
@@ -174,6 +228,7 @@ export const AnimatedPage = ({ children, className = '' }) => {
 
 // Stagger container
 export const StaggerContainer = ({ children, className = '', delay = 0 }) => {
+  const { stagger } = useMotionSettings();
   return (
     <motion.div
       variants={{
@@ -181,8 +236,8 @@ export const StaggerContainer = ({ children, className = '', delay = 0 }) => {
         visible: {
           opacity: 1,
           transition: {
-            staggerChildren: 0.08,
-            delayChildren: delay
+            staggerChildren: stagger.children,
+            delayChildren: delay || stagger.delay
           }
         }
       }}
@@ -197,8 +252,21 @@ export const StaggerContainer = ({ children, className = '', delay = 0 }) => {
 
 // Stagger item
 export const StaggerItem = ({ children, className = '' }) => {
+  const { durations, offsets } = useMotionSettings();
+  const variants = {
+    hidden: { opacity: 0, y: offsets.itemY, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: durations.item,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    }
+  };
   return (
-    <motion.div variants={itemVariants} className={className}>
+    <motion.div variants={variants} className={className}>
       {children}
     </motion.div>
   );
@@ -206,11 +274,12 @@ export const StaggerItem = ({ children, className = '' }) => {
 
 // Fade in component
 export const FadeIn = ({ children, delay = 0, className = '', direction = 'up' }) => {
+  const { durations, offsets } = useMotionSettings();
   const directions = {
-    up: { y: 30, x: 0 },
-    down: { y: -30, x: 0 },
-    left: { y: 0, x: 30 },
-    right: { y: 0, x: -30 }
+    up: { y: offsets.fadeY, x: 0 },
+    down: { y: -offsets.fadeY, x: 0 },
+    left: { y: 0, x: offsets.fadeY },
+    right: { y: 0, x: -offsets.fadeY }
   };
 
   return (
@@ -218,7 +287,7 @@ export const FadeIn = ({ children, delay = 0, className = '', direction = 'up' }
       initial={{ opacity: 0, ...directions[direction] }}
       animate={{ opacity: 1, y: 0, x: 0 }}
       transition={{
-        duration: 0.6,
+        duration: durations.fade,
         delay,
         ease: [0.25, 0.46, 0.45, 0.94]
       }}
@@ -231,9 +300,30 @@ export const FadeIn = ({ children, delay = 0, className = '', direction = 'up' }
 
 // Animated card with hover effect
 export const AnimatedCard = ({ children, className = '', onClick }) => {
+  const { durations } = useMotionSettings();
+  const variants = {
+    rest: {
+      scale: 1,
+      y: 0,
+      boxShadow: '0 3px 10px -3px rgba(0, 0, 0, 0.08)'
+    },
+    hover: {
+      scale: 1.01,
+      y: -4,
+      boxShadow: '0 12px 24px -10px rgba(0, 0, 0, 0.12)',
+      transition: {
+        duration: durations.hover,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    },
+    tap: {
+      scale: 0.98
+    }
+  };
+
   return (
     <motion.div
-      variants={cardHoverVariants}
+      variants={variants}
       initial="rest"
       whileHover="hover"
       whileTap="tap"
@@ -247,9 +337,22 @@ export const AnimatedCard = ({ children, className = '', onClick }) => {
 
 // Animated button
 export const AnimatedButton = ({ children, className = '', ...props }) => {
+  const { durations } = useMotionSettings();
+  const variants = {
+    rest: { scale: 1 },
+    hover: {
+      scale: 1.04,
+      transition: {
+        duration: durations.hover,
+        ease: 'easeOut'
+      }
+    },
+    tap: { scale: 0.96 }
+  };
+
   return (
     <motion.button
-      variants={buttonVariants}
+      variants={variants}
       initial="rest"
       whileHover="hover"
       whileTap="tap"
