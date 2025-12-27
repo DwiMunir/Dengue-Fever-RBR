@@ -163,6 +163,18 @@ code {
     }
 }
 
+@layer base {
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+    input[type="date"]::-webkit-inner-spin-button {
+        opacity: 0;
+    }
+    input[type="date"]::-ms-clear {
+        display: none;
+    }
+}
+
 /* Custom utility classes */
 @layer utilities {
     .text-gradient-primary {

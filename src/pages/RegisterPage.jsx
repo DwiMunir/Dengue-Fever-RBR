@@ -151,7 +151,9 @@ export default function RegisterPage() {
                         >
                           <Label htmlFor={field.name} className="text-sm font-medium">{field.label}</Label>
                           <div className="relative">
-                            <Icon className={`absolute left-3.5 top-3.5 h-5 w-5 transition-colors duration-300 ${focusedField === field.name ? 'text-primary' : 'text-muted-foreground'}`} />
+                            {/* {field.type !== 'date' && ( */}
+                              <Icon className={`absolute left-3.5 top-3.5 h-5 w-5 transition-colors duration-300 ${focusedField === field.name ? 'text-primary' : 'text-muted-foreground'}`} />
+                            {/* )} */}
                             <Input
                               id={field.name}
                               name={field.name}
@@ -161,7 +163,7 @@ export default function RegisterPage() {
                               onChange={handleChange}
                               onFocus={() => setFocusedField(field.name)}
                               onBlur={() => setFocusedField(null)}
-                              className="h-12 border-2 bg-background/50 pl-11 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                              className={`h-12 border-2 bg-background/50 transition-all duration-300 focus:border-primary focus:ring-2 focus:ring-primary/20 ${field.type === 'date' ? 'pl-11 appearance-none' : 'pl-11'}`}
                               required
                             />
                           </div>

@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Activity, LogOut, User, History, Sparkles, Menu, X, Home, ClipboardList } from 'lucide-react';
+import { Activity, LogOut, User, History, Sparkles, Menu, X, Home, ClipboardList, Mail, Users } from 'lucide-react';
 import { isAuthenticated, getUser } from '@/utils/localStorage';
 import { useLogout } from '@/hooks/useAuth';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -50,6 +50,8 @@ export const Navbar = () => {
 
   const navLinks = [
     { path: '/', label: t('nav.home'), icon: Home },
+    { path: '/about', label: t('nav.about'), icon: Users },
+    { path: '/contact', label: t('nav.contact'), icon: Mail },
     { path: '/dashboard', label: t('nav.dashboard'), icon: User, authRequired: true },
     { path: '/test', label: t('nav.startTest'), icon: ClipboardList, authRequired: true },
     { path: '/history', label: t('nav.testHistory'), icon: History, authRequired: true },
