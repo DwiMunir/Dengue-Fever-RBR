@@ -349,8 +349,79 @@
       "description": "Pendarahan dari gusi adalah manifestasi umum dari komplikasi hemoragik dengue."
     },
     "q15": {
-      "question": "Apakah Anda mengalami kegelisahan, iritabilitas, atau perubahan status mental?",
-      "description": "Perubahan status mental atau kesadaran dapat menunjukkan komplikasi parah."
+      "question": "Apakah Anda mengalami kegelisahan, mudah marah, atau perubahan kondisi mental?",
+      "description": "Perubahan status mental atau kesadaran dapat mengindikasikan komplikasi serius."
+    }
+  },
+  "about": {
+    "badge": "Tentang Kami",
+    "title": "Tentang DengueExpert",
+    "subtitle": "Sistem pakar Rule-Based Reasoning yang dirancang untuk membantu diagnosis awal demam berdarah dengue menggunakan metodologi forward chaining dan pengetahuan medis berbasis bukti.",
+    "mission": {
+      "title": "Misi Kami",
+      "content": "Menyediakan skrining awal demam berdarah yang mudah diakses, dapat diandalkan, dan efisien melalui teknologi sistem pakar, membantu individu membuat keputusan yang tepat tentang pencarian perawatan medis."
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "content": "Menjadi alat terpercaya dalam deteksi dan pencegahan dini demam berdarah, berkontribusi pada hasil kesehatan yang lebih baik dan mengurangi beban demam berdarah di masyarakat."
+    },
+    "stats": {
+      "symptoms": "Gejala yang Dicakup",
+      "rules": "Aturan Pakar",
+      "diagnoses": "Jenis Diagnosis",
+      "privacy": "Privasi Terlindungi"
+    },
+    "keyFeatures": {
+      "title": "Fitur Utama"
+    },
+    "features": {
+      "ruleBased": {
+        "title": "Diagnosis Berbasis Aturan",
+        "desc": "Aturan medis pakar secara sistematis menganalisis gejala untuk mencapai kesimpulan yang akurat."
+      },
+      "forwardChaining": {
+        "title": "Logika Forward Chaining",
+        "desc": "Metode penalaran progresif yang mengikuti pola gejala untuk menentukan diagnosis."
+      },
+      "evidenceBased": {
+        "title": "Kedokteran Berbasis Bukti",
+        "desc": "Dibangun berdasarkan pedoman medis yang mapan dan bukti klinis untuk diagnosis dengue."
+      },
+      "efficient": {
+        "title": "Cepat & Efisien",
+        "desc": "Proses penilaian cepat yang memberikan hasil dalam waktu kurang dari 5 menit."
+      }
+    },
+    "techStack": {
+      "title": "Teknologi yang Digunakan"
+    },
+    "team": {
+      "title": "Tim Kami",
+      "subtitle": "Kenali tim yang berdedikasi di balik DengueExpert yang bekerja untuk menciptakan sistem diagnostik ini.",
+      "member1": {
+        "name": "Muhammad Fatkurozi",
+        "role": "Pemimpin Proyek & Backend Developer"
+      },
+      "member2": {
+        "name": "Mutiara Azkiya Fadilah",
+        "role": "Spesialis Dokumentasi"
+      },
+      "member3": {
+        "name": "Dwi Misbachul Munir",
+        "role": "Frontend Developer & UI/UX"
+      },
+      "member4": {
+        "name": "Joko Supriyanto",
+        "role": "Kepala Quality Assurance"
+      },
+      "member5": {
+        "name": "Dimas Maulana",
+        "role": "Riset & Pengembangan Konsep"
+      }
+    },
+    "commitment": {
+      "title": "Komitmen Kami",
+      "content": "Kami berkomitmen untuk mempertahankan standar tertinggi akurasi medis, privasi pengguna, dan keandalan sistem. Alat ini dirancang untuk membantu, bukan menggantikan, konsultasi medis profesional."
     }
   }
 }

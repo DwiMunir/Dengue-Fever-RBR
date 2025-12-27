@@ -352,5 +352,76 @@
       "question": "Are you experiencing restlessness, irritability, or altered mental state?",
       "description": "Changes in mental status or consciousness can indicate severe complications."
     }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "About DengueExpert",
+    "subtitle": "A Rule-Based Reasoning expert system designed to assist in preliminary dengue fever diagnosis using forward chaining methodology and evidence-based medical knowledge.",
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide accessible, reliable, and efficient preliminary dengue fever screening through expert system technology, helping individuals make informed decisions about seeking medical care."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To become a trusted tool in early dengue detection and prevention, contributing to better health outcomes and reducing the burden of dengue fever in communities."
+    },
+    "stats": {
+      "symptoms": "Symptoms Covered",
+      "rules": "Expert Rules",
+      "diagnoses": "Diagnosis Types",
+      "privacy": "Privacy Protected"
+    },
+    "keyFeatures": {
+      "title": "Key Features"
+    },
+    "features": {
+      "ruleBased": {
+        "title": "Rule-Based Diagnosis",
+        "desc": "Expert medical rules systematically analyze symptoms to reach accurate conclusions."
+      },
+      "forwardChaining": {
+        "title": "Forward Chaining Logic",
+        "desc": "Progressive reasoning method that follows symptom patterns to determine diagnosis."
+      },
+      "evidenceBased": {
+        "title": "Evidence-Based Medicine",
+        "desc": "Built on established medical guidelines and clinical evidence for dengue diagnosis."
+      },
+      "efficient": {
+        "title": "Fast & Efficient",
+        "desc": "Quick assessment process that delivers results in under 5 minutes."
+      }
+    },
+    "techStack": {
+      "title": "Technology Stack"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the dedicated team behind DengueExpert working to create this diagnostic system.",
+      "member1": {
+        "name": "Muhammad Fatkurozi",
+        "role": "Project Leader & Backend Developer"
+      },
+      "member2": {
+        "name": "Mutiara Azkiya Fadilah",
+        "role": "Documentation Specialist"
+      },
+      "member3": {
+        "name": "Dwi Misbachul Munir",
+        "role": "Frontend Developer & UI/UX"
+      },
+      "member4": {
+        "name": "Joko Supriyanto",
+        "role": "Quality Assurance Lead"
+      },
+      "member5": {
+        "name": "Dimas Maulana",
+        "role": "Research & Concept Development"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "content": "We are committed to maintaining the highest standards of medical accuracy, user privacy, and system reliability. This tool is designed to assist, not replace, professional medical consultation."
+    }
   }
 }

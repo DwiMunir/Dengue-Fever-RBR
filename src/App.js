@@ -16,6 +16,7 @@ import DashboardPage from '@/pages/DashboardPage';
 import TestPage from '@/pages/TestPage';
 import ResultPage from '@/pages/ResultPage';
 import HistoryPage from '@/pages/HistoryPage';
+import AboutPage from '@/pages/AboutPage';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route 
             path="/login" 
             element={
