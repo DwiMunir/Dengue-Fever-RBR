@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +29,7 @@ import {
   GitBranch
 } from 'lucide-react';
 import { isAuthenticated } from '@/utils/localStorage';
+import useIsMobile from '@/hooks/useIsMobile';
 
 // Golden Ratio: 1.618
 // Spacing scale based on golden ratio: 8, 13, 21, 34, 55, 89, 144
@@ -37,6 +38,9 @@ export default function LandingPage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const authenticated = isAuthenticated();
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const shouldReduceMotion = prefersReducedMotion || isMobile;
 
   const handleGetStarted = () => {
     if (authenticated) {
@@ -103,32 +107,41 @@ export default function LandingPage() {
       <section className="relative flex min-h-[calc(100vh-80px)] items-center justify-center">
         {/* Animated Background */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <motion.div
-            className="absolute -left-1/4 -top-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl"
-            animate={{
-              x: [0, 50, 0],
-              y: [0, 30, 0],
-              scale: [1, 1.1, 1]
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          />
-          <motion.div
-            className="absolute -bottom-1/4 -right-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 blur-3xl"
-            animate={{
-              x: [0, -30, 0],
-              y: [0, -50, 0],
-              scale: [1, 1.15, 1]
-            }}
-            transition={{
-              duration: 18,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          />
+          {shouldReduceMotion ? (
+            <>
+              <div className="absolute -left-1/4 -top-1/4 h-[360px] w-[360px] rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl sm:h-[500px] sm:w-[500px] sm:blur-3xl" />
+              <div className="absolute -bottom-1/4 -right-1/4 h-[320px] w-[320px] rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 blur-2xl sm:h-[450px] sm:w-[450px] sm:blur-3xl" />
+            </>
+          ) : (
+            <>
+              <motion.div
+                className="absolute -left-1/4 -top-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl"
+                animate={{
+                  x: [0, 50, 0],
+                  y: [0, 30, 0],
+                  scale: [1, 1.1, 1]
+                }}
+                transition={{
+                  duration: 15,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
+              />
+              <motion.div
+                className="absolute -bottom-1/4 -right-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 blur-3xl"
+                animate={{
+                  x: [0, -30, 0],
+                  y: [0, -50, 0],
+                  scale: [1, 1.15, 1]
+                }}
+                transition={{
+                  duration: 18,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
+              />
+            </>
+          )}
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,8 +150,8 @@ export default function LandingPage() {
             <FadeIn delay={0.1}>
               <motion.div
                 className="mb-8 inline-flex"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.95 }}
               >
                 <Badge 
                   className="gap-2 border-primary/20 bg-primary/10 px-5 py-2.5 text-sm font-medium text-primary backdrop-blur-sm" 
@@ -158,12 +171,16 @@ export default function LandingPage() {
                   <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
                     {t('landing.hero.titleHighlight')}
                   </span>
-                  <motion.span
-                    className="absolute -bottom-3 left-0 right-0 mx-auto h-1.5 w-48 rounded-full bg-gradient-to-r from-primary via-accent to-secondary sm:w-64 md:w-72 lg:w-80"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ delay: 0.8, duration: 0.8, ease: 'easeOut' }}
-                  />
+                  {shouldReduceMotion ? (
+                    <span className="absolute -bottom-3 left-0 right-0 mx-auto h-1.5 w-48 rounded-full bg-gradient-to-r from-primary via-accent to-secondary sm:w-64 md:w-72 lg:w-80" />
+                  ) : (
+                    <motion.span
+                      className="absolute -bottom-3 left-0 right-0 mx-auto h-1.5 w-48 rounded-full bg-gradient-to-r from-primary via-accent to-secondary sm:w-64 md:w-72 lg:w-80"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ delay: 0.8, duration: 0.8, ease: 'easeOut' }}
+                    />
+                  )}
                 </span>
               </h1>
             </FadeIn>
@@ -179,8 +196,8 @@ export default function LandingPage() {
             <FadeIn delay={0.4}>
               <div className="mb-16 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-6">
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -3 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={shouldReduceMotion ? undefined : { scale: 1.05, y: -3 }}
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                 >
                   <Button
                     size="lg"
@@ -191,17 +208,19 @@ export default function LandingPage() {
                       {t('landing.hero.startDiagnosis')}
                       <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-accent to-primary"
-                      initial={{ x: '100%' }}
-                      whileHover={{ x: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
+                    {!shouldReduceMotion && (
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-accent to-primary"
+                        initial={{ x: '100%' }}
+                        whileHover={{ x: 0 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    )}
                   </Button>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -3 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={shouldReduceMotion ? undefined : { scale: 1.05, y: -3 }}
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                 >
                   <Button
                     size="lg"
@@ -224,7 +243,7 @@ export default function LandingPage() {
                     <motion.div
                       key={index}
                       className="group relative rounded-2xl bg-card/60 p-5 backdrop-blur-sm transition-all duration-300 sm:p-8"
-                      whileHover={{ y: -8, scale: 1.02 }}
+                      whileHover={shouldReduceMotion ? undefined : { y: -8, scale: 1.02 }}
                     >
                       <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       <Icon className="mx-auto mb-3 h-7 w-7 text-primary sm:mb-4 sm:h-9 sm:w-9" />
@@ -281,20 +300,20 @@ export default function LandingPage() {
               const Icon = feature.icon;
               return (
                 <StaggerItem key={index}>
-                  <motion.div
-                    variants={cardHoverVariants}
-                    initial="rest"
-                    whileHover="hover"
-                    whileTap="tap"
-                    className="h-full"
-                  >
+                    <motion.div
+                      variants={cardHoverVariants}
+                      initial="rest"
+                      whileHover={shouldReduceMotion ? undefined : "hover"}
+                      whileTap={shouldReduceMotion ? undefined : "tap"}
+                      className="h-full"
+                    >
                     <Card className="group relative flex h-full flex-col overflow-hidden border-0 bg-card/60 backdrop-blur-sm transition-all duration-500">
                       <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 transition-opacity duration-500 group-hover:opacity-5`} />
                       <CardContent className="relative flex flex-1 flex-col p-6 sm:p-8">
                         <motion.div
                           className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.gradient} shadow-lg`}
-                          whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
-                          transition={{ duration: 0.5 }}
+                          whileHover={shouldReduceMotion ? undefined : { rotate: [0, -10, 10, 0], scale: 1.1 }}
+                          transition={shouldReduceMotion ? undefined : { duration: 0.5 }}
                         >
                           <Icon className="h-7 w-7 text-white" />
                         </motion.div>
@@ -344,14 +363,14 @@ export default function LandingPage() {
                 <StaggerItem key={step.number}>
                   <motion.div
                     className="relative flex flex-col items-center text-center"
-                    whileHover={{ y: -8 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+                    transition={shouldReduceMotion ? undefined : { duration: 0.3 }}
                   >
                     {/* Step Number Circle */}
                     <motion.div
                       className="relative z-10 mb-6 flex h-[120px] w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-2xl shadow-primary/30"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
+                      whileHover={shouldReduceMotion ? undefined : { scale: 1.1 }}
+                      transition={shouldReduceMotion ? undefined : { duration: 0.3 }}
                     >
                       <div className="flex h-full w-full items-center justify-center rounded-full bg-background">
                         <span className="bg-gradient-to-br from-primary to-accent bg-clip-text text-4xl font-bold text-transparent">
@@ -372,8 +391,8 @@ export default function LandingPage() {
                     {index < steps.length - 1 && (
                       <motion.div 
                         className="my-6 md:hidden"
-                        animate={{ y: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
+                        animate={shouldReduceMotion ? undefined : { y: [0, 5, 0] }}
+                        transition={shouldReduceMotion ? undefined : { duration: 1.5, repeat: Infinity }}
                       >
                         <ArrowDown className="h-6 w-6 text-primary/50" />
                       </motion.div>
@@ -399,8 +418,8 @@ export default function LandingPage() {
               <CardContent className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:gap-8 sm:p-8 lg:p-10">
                 <motion.div
                   className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-accent/10"
-                  animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                  animate={shouldReduceMotion ? undefined : { rotate: [0, 5, -5, 0] }}
+                  transition={shouldReduceMotion ? undefined : { duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 >
                   <AlertCircle className="h-8 w-8 text-accent" />
                 </motion.div>
@@ -422,18 +441,22 @@ export default function LandingPage() {
       <AnimatedSection className="relative overflow-hidden py-20 sm:py-24 lg:py-32">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10" />
-          <motion.div
-            className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0.8, 0.5]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          />
+          {shouldReduceMotion ? (
+            <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl sm:h-[520px] sm:w-[520px] sm:blur-3xl" />
+          ) : (
+            <motion.div
+              className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-3xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.8, 0.5]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }}
+            />
+          )}
         </div>
 
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
@@ -445,8 +468,8 @@ export default function LandingPage() {
               {t('landing.cta.subtitle')}
             </p>
             <motion.div
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={shouldReduceMotion ? undefined : { scale: 1.05, y: -3 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
             >
               <Button
                 size="lg"
@@ -456,8 +479,8 @@ export default function LandingPage() {
                 <span className="relative z-10 flex items-center gap-3">
                   {t('landing.cta.button')}
                   <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
+                    animate={shouldReduceMotion ? undefined : { x: [0, 5, 0] }}
+                    transition={shouldReduceMotion ? undefined : { duration: 1.5, repeat: Infinity }}
                   >
                     <ChevronRight className="h-5 w-5" />
                   </motion.span>

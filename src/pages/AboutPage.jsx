@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -9,13 +9,14 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
-import { 
+import {
   AnimatedPage, 
   FadeIn, 
   StaggerContainer, 
   StaggerItem,
   cardHoverVariants 
 } from '@/components/AnimatedPage';
+import useIsMobile from '@/hooks/useIsMobile';
 import {
   Activity,
   Target,
@@ -41,6 +42,9 @@ import munirImg from '@/assets/munir.webp';
 
 export default function AboutPage() {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const shouldReduceMotion = prefersReducedMotion || isMobile;
 
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
@@ -153,22 +157,31 @@ export default function AboutPage() {
     <AnimatedPage className="min-h-[calc(100vh-4rem)] py-12 sm:py-16">
       {/* Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <motion.div
-          className="absolute -left-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute -right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        />
+        {shouldReduceMotion ? (
+          <>
+            <div className="absolute -left-1/4 top-1/4 h-[340px] w-[340px] rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-2xl sm:h-[460px] sm:w-[460px] sm:blur-3xl" />
+            <div className="absolute -right-1/4 bottom-1/4 h-[340px] w-[340px] rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 blur-2xl sm:h-[460px] sm:w-[460px] sm:blur-3xl" />
+          </>
+        ) : (
+          <>
+            <motion.div
+              className="absolute -left-1/4 top-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-3xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            />
+            <motion.div
+              className="absolute -right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 blur-3xl"
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+            />
+          </>
+        )}
       </div>
 
       <div className="container mx-auto max-w-6xl px-4">
@@ -194,8 +207,8 @@ export default function AboutPage() {
             <motion.div
               variants={cardHoverVariants}
               initial="rest"
-              whileHover="hover"
-              whileTap="tap"
+              whileHover={shouldReduceMotion ? undefined : "hover"}
+              whileTap={shouldReduceMotion ? undefined : "tap"}
             >
               <Card className="h-full border-0 bg-card/80 shadow-xl backdrop-blur-sm">
                 <CardContent className="p-8">
@@ -215,8 +228,8 @@ export default function AboutPage() {
             <motion.div
               variants={cardHoverVariants}
               initial="rest"
-              whileHover="hover"
-              whileTap="tap"
+              whileHover={shouldReduceMotion ? undefined : "hover"}
+              whileTap={shouldReduceMotion ? undefined : "tap"}
             >
               <Card className="h-full border-0 bg-card/80 shadow-xl backdrop-blur-sm">
                 <CardContent className="p-8">
@@ -245,7 +258,7 @@ export default function AboutPage() {
                   key={index}
                   variants={cardHoverVariants}
                   initial="rest"
-                  whileHover="hover"
+                  whileHover={shouldReduceMotion ? undefined : "hover"}
                 >
                   <Card className="border-0 bg-card/80 shadow-xl backdrop-blur-sm">
                     <CardContent className="p-6 text-center">
@@ -274,15 +287,15 @@ export default function AboutPage() {
                     <motion.div
                       variants={cardHoverVariants}
                       initial="rest"
-                      whileHover="hover"
-                      whileTap="tap"
+                      whileHover={shouldReduceMotion ? undefined : "hover"}
+                      whileTap={shouldReduceMotion ? undefined : "tap"}
                     >
                       <Card className="h-full border-0 bg-card/80 shadow-xl backdrop-blur-sm">
                         <CardContent className="p-6">
-                          <motion.div
-                            className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient}`}
-                            whileHover={{ rotate: 10, scale: 1.1 }}
-                          >
+                        <motion.div
+                          className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient}`}
+                          whileHover={shouldReduceMotion ? undefined : { rotate: 10, scale: 1.1 }}
+                        >
                             <Icon className="h-6 w-6 text-white" />
                           </motion.div>
                           <h3 className="mb-2 text-xl font-semibold text-foreground">
@@ -332,8 +345,8 @@ export default function AboutPage() {
                           <CardContent className="flex flex-col items-center justify-center p-8 text-center h-full min-h-[280px]">
                             <motion.div
                               className={`mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br ${member.color} text-2xl font-bold text-white`}
-                              whileHover={{ scale: 1.15, rotate: 10 }}
-                              transition={{ type: "spring", stiffness: 300 }}
+                              whileHover={shouldReduceMotion ? undefined : { scale: 1.15, rotate: 10 }}
+                              transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                             >
                               {member.image ? (
                                 <img
@@ -348,15 +361,15 @@ export default function AboutPage() {
                             </motion.div>
                             <motion.h3 
                               className="mb-2 text-lg font-semibold text-foreground"
-                              whileHover={{ scale: 1.05 }}
-                              transition={{ type: "spring", stiffness: 300 }}
+                              whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
+                              transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                             >
                               {member.name}
                             </motion.h3>
                             <motion.p 
                               className="text-sm text-muted-foreground"
-                              whileHover={{ scale: 1.02 }}
-                              transition={{ type: "spring", stiffness: 300 }}
+                              whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+                              transition={shouldReduceMotion ? undefined : { type: "spring", stiffness: 300 }}
                             >
                               {member.role}
                             </motion.p>
@@ -392,10 +405,10 @@ export default function AboutPage() {
             <CardContent className="p-8 text-center">
               <motion.div
                 className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent"
-                animate={{
+                animate={shouldReduceMotion ? undefined : {
                   scale: [1, 1.1, 1],
                 }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                transition={shouldReduceMotion ? undefined : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <Heart className="h-8 w-8 text-white" />
               </motion.div>
