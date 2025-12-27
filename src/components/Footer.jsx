@@ -14,10 +14,12 @@ import {
   Linkedin,
   ArrowUpRight
 } from 'lucide-react';
+import { CONTACT_INFO, getLocalizedContactInfo } from '@/config/contactInfo';
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const localizedInfo = getLocalizedContactInfo(i18n.language);
 
   const footerLinks = {
     product: [
@@ -33,7 +35,7 @@ export const Footer = () => {
     legal: [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
-      { label: 'Cookie Policy', href: '#' },
+      { label: 'Cookie Policy', href: '/cookies' },
     ],
   };
 
@@ -100,15 +102,15 @@ export const Footer = () => {
             <div className="mt-8 space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">support@dengue-fever.umby.dev</span>
+                <span className="text-sm text-muted-foreground">{CONTACT_INFO.supportEmail}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">+62 895384046096</span>
+                <span className="text-sm text-muted-foreground">{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">Yogyakarta, Indonesia</span>
+                <span className="text-sm text-muted-foreground">{localizedInfo.location}</span>
               </div>
             </div>
           </div>

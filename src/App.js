@@ -21,6 +21,7 @@ import ContactPage from './pages/ContactPage';
 import CareersPage from './pages/CareersPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
+          <Route path="/cookies" element={<CookiePolicyPage />} />
           <Route 
             path="/login" 
             element={

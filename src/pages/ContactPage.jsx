@@ -22,9 +22,10 @@ import {
   MessageSquare
 } from 'lucide-react';
 import { toast } from 'sonner';
+import { CONTACT_INFO, getLocalizedContactInfo } from '@/config/contactInfo';
 
 export default function ContactPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,29 +52,30 @@ export default function ContactPage() {
     });
   };
 
+  const localizedInfo = getLocalizedContactInfo(i18n.language);
   const contactInfo = [
     {
       icon: Mail,
       title: t('contact.info.email.title'),
-      value: 'support@dengue-fever.umby.dev',
+      value: CONTACT_INFO.supportEmail,
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Phone,
       title: t('contact.info.phone.title'),
-      value: '+62 895-3840-46096',
+      value: CONTACT_INFO.phone,
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       icon: MapPin,
       title: t('contact.info.location.title'),
-      value: t('contact.info.location.value'),
+      value: localizedInfo.location,
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
       icon: Clock,
       title: t('contact.info.hours.title'),
-      value: t('contact.info.hours.value'),
+      value: localizedInfo.hours,
       gradient: 'from-orange-500 to-amber-500'
     }
   ];

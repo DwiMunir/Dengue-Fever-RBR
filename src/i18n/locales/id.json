@@ -547,6 +547,46 @@
       "description": "Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi kami atau bagaimana kami menangani data Anda, jangan ragu untuk menghubungi kami."
     }
   },
+  "cookies": {
+    "badge": "Penggunaan Cookie",
+    "title": "Kebijakan Cookie",
+    "subtitle": "Pelajari bagaimana kami menggunakan cookie untuk menjaga pengalaman Anda tetap aman dan personal.",
+    "lastUpdated": "Terakhir Diperbarui",
+    "intro": {
+      "title": "Ringkasan",
+      "content": "Kebijakan Cookie ini menjelaskan apa itu cookie, bagaimana kami menggunakannya, dan pilihan yang Anda miliki. Dengan menggunakan DengueExpert, Anda menyetujui penggunaan cookie sebagaimana dijelaskan di sini."
+    },
+    "sections": {
+      "essential": {
+        "title": "Cookie Esensial",
+        "content": "Cookie ini diperlukan agar situs berfungsi dan tidak dapat dimatikan.\n\n• Autentikasi dan manajemen sesi\n• Keamanan dan pencegahan penipuan\n• Penyeimbangan beban dan kinerja"
+      },
+      "preferences": {
+        "title": "Cookie Preferensi",
+        "content": "Cookie ini mengingat pilihan Anda untuk meningkatkan pengalaman.\n\n• Preferensi bahasa\n• Pengaturan UI dan tata letak\n• Filter dan tampilan tersimpan"
+      },
+      "analytics": {
+        "title": "Cookie Analitik",
+        "content": "Cookie ini membantu kami memahami bagaimana situs digunakan agar bisa ditingkatkan.\n\n• Tampilan halaman dan alur navigasi\n• Tren penggunaan fitur\n• Metrik kinerja agregat"
+      },
+      "functionality": {
+        "title": "Cookie Fungsionalitas",
+        "content": "Cookie ini mengaktifkan fitur tambahan dan personalisasi.\n\n• Mengingat aktivitas terbaru\n• Menjaga progres pengisian formulir\n• Meningkatkan fitur aksesibilitas"
+      },
+      "thirdParty": {
+        "title": "Cookie Pihak Ketiga",
+        "content": "Beberapa fitur bergantung pada layanan pihak ketiga yang menetapkan cookie mereka sendiri.\n\n• Konten tertanam atau widget\n• Alat analitik atau pemantauan\n• Integrasi eksternal"
+      },
+      "manage": {
+        "title": "Mengelola Cookie Anda",
+        "content": "Anda dapat mengontrol dan menghapus cookie melalui pengaturan browser.\n\n• Blokir atau hapus cookie kapan saja\n• Atur preferensi per situs\n• Catatan: menonaktifkan cookie dapat mempengaruhi fungsionalitas"
+      }
+    },
+    "contact": {
+      "title": "Pertanyaan tentang Cookie?",
+      "description": "Jika Anda memiliki pertanyaan tentang Kebijakan Cookie kami atau bagaimana kami menggunakan cookie, silakan hubungi kami."
+    }
+  },
   "terms": {
     "badge": "Perjanjian Hukum",
     "title": "Ketentuan Layanan",

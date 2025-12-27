@@ -19,6 +19,7 @@ import {
   AlertCircle,
   Mail
 } from 'lucide-react';
+import { CONTACT_INFO } from '@/config/contactInfo';
 
 export default function PrivacyPolicyPage() {
   const { t } = useTranslation();
@@ -155,7 +156,7 @@ export default function PrivacyPolicyPage() {
                 {t('privacy.contact.description')}
               </p>
               <p className="mt-4 font-medium text-primary">
-                dengueexpert@example.com
+                {CONTACT_INFO.policyEmail}
               </p>
             </CardContent>
           </Card>

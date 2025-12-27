@@ -3,75 +3,62 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  AnimatedPage, 
-  FadeIn, 
-  StaggerContainer, 
-  StaggerItem 
+import {
+  AnimatedPage,
+  FadeIn,
+  StaggerContainer,
+  StaggerItem
 } from '@/components/AnimatedPage';
 import {
-  FileText,
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
-  Scale,
-  UserX,
-  RefreshCw,
+  Cookie,
+  Settings,
+  BarChart3,
+  Shield,
+  Globe,
+  SlidersHorizontal,
   Mail
 } from 'lucide-react';
 import { CONTACT_INFO } from '@/config/contactInfo';
 
-export default function TermsOfServicePage() {
+export default function CookiePolicyPage() {
   const { t } = useTranslation();
 
   const sections = [
     {
-      icon: CheckCircle,
-      title: t('terms.sections.acceptance.title'),
-      content: t('terms.sections.acceptance.content'),
+      icon: Cookie,
+      title: t('cookies.sections.essential.title'),
+      content: t('cookies.sections.essential.content'),
+      gradient: 'from-amber-500 to-orange-500'
+    },
+    {
+      icon: Settings,
+      title: t('cookies.sections.preferences.title'),
+      content: t('cookies.sections.preferences.content'),
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: FileText,
-      title: t('terms.sections.serviceDescription.title'),
-      content: t('terms.sections.serviceDescription.content'),
+      icon: BarChart3,
+      title: t('cookies.sections.analytics.title'),
+      content: t('cookies.sections.analytics.content'),
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      icon: UserX,
-      title: t('terms.sections.userResponsibilities.title'),
-      content: t('terms.sections.userResponsibilities.content'),
+      icon: Shield,
+      title: t('cookies.sections.functionality.title'),
+      content: t('cookies.sections.functionality.content'),
       gradient: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: AlertTriangle,
-      title: t('terms.sections.medicalDisclaimer.title'),
-      content: t('terms.sections.medicalDisclaimer.content'),
-      gradient: 'from-red-500 to-orange-500'
+      icon: Globe,
+      title: t('cookies.sections.thirdParty.title'),
+      content: t('cookies.sections.thirdParty.content'),
+      gradient: 'from-indigo-500 to-violet-500'
     },
     {
-      icon: Scale,
-      title: t('terms.sections.intellectualProperty.title'),
-      content: t('terms.sections.intellectualProperty.content'),
-      gradient: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: XCircle,
-      title: t('terms.sections.limitation.title'),
-      content: t('terms.sections.limitation.content'),
-      gradient: 'from-amber-500 to-yellow-500'
-    },
-    {
-      icon: UserX,
-      title: t('terms.sections.termination.title'),
-      content: t('terms.sections.termination.content'),
-      gradient: 'from-pink-500 to-rose-500'
-    },
-    {
-      icon: RefreshCw,
-      title: t('terms.sections.changes.title'),
-      content: t('terms.sections.changes.content'),
-      gradient: 'from-cyan-500 to-blue-500'
+      icon: SlidersHorizontal,
+      title: t('cookies.sections.manage.title'),
+      content: t('cookies.sections.manage.content'),
+      gradient: 'from-rose-500 to-pink-500'
     }
   ];
 
@@ -82,16 +69,16 @@ export default function TermsOfServicePage() {
         <FadeIn>
           <div className="mb-12 text-center">
             <Badge className="mb-4 bg-gradient-to-r from-primary to-accent text-white">
-              {t('terms.badge')}
+              {t('cookies.badge')}
             </Badge>
             <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
-              {t('terms.title')}
+              {t('cookies.title')}
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              {t('terms.subtitle')}
+              {t('cookies.subtitle')}
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
-              {t('terms.lastUpdated')}: {new Date().toLocaleDateString()}
+              {t('cookies.lastUpdated')}: {new Date().toLocaleDateString()}
             </p>
           </div>
         </FadeIn>
@@ -102,14 +89,14 @@ export default function TermsOfServicePage() {
             <CardContent className="p-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-                  <AlertTriangle className="h-6 w-6 text-white" />
+                  <Cookie className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h2 className="mb-2 text-xl font-semibold text-foreground">
-                    {t('terms.intro.title')}
+                    {t('cookies.intro.title')}
                   </h2>
                   <p className="text-muted-foreground">
-                    {t('terms.intro.content')}
+                    {t('cookies.intro.content')}
                   </p>
                 </div>
               </div>
@@ -117,7 +104,7 @@ export default function TermsOfServicePage() {
           </Card>
         </FadeIn>
 
-        {/* Terms Sections */}
+        {/* Cookie Sections */}
         <FadeIn delay={0.2}>
           <StaggerContainer className="space-y-6">
             {sections.map((section, index) => {
@@ -128,7 +115,7 @@ export default function TermsOfServicePage() {
                     whileHover={{ scale: 1.01 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Card className="border border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/50 transition-colors">
+                    <Card className="border border-border/50 bg-card/80 backdrop-blur-sm transition-colors hover:border-primary/50">
                       <CardContent className="p-6">
                         <div className="mb-4 flex items-center gap-3">
                           <motion.div
@@ -142,7 +129,7 @@ export default function TermsOfServicePage() {
                             {section.title}
                           </h3>
                         </div>
-                        <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                        <p className="whitespace-pre-line text-muted-foreground leading-relaxed">
                           {section.content}
                         </p>
                       </CardContent>
@@ -162,10 +149,10 @@ export default function TermsOfServicePage() {
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <h2 className="mb-2 text-2xl font-semibold text-foreground">
-                {t('terms.contact.title')}
+                {t('cookies.contact.title')}
               </h2>
               <p className="mx-auto max-w-xl text-muted-foreground">
-                {t('terms.contact.description')}
+                {t('cookies.contact.description')}
               </p>
               <p className="mt-4 font-medium text-primary">
                 {CONTACT_INFO.policyEmail}
