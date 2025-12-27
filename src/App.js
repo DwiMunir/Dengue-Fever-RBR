@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { Navbar } from '@/components/Navbar';
 import { ProtectedRoute, PublicRoute } from '@/components/ProtectedRoute';
 import { queryClient } from '@/lib/queryClient';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
@@ -41,6 +42,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App min-h-screen bg-background">
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar />
           <Suspense fallback={<PageFallback />}>
             <Routes>
