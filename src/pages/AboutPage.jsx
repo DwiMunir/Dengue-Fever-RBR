@@ -33,6 +33,12 @@ import {
   Linkedin
 } from 'lucide-react';
 
+import jokoImg from '@/assets/joko.jpeg';
+import dimasImg from '@/assets/dimas.webp';
+import fatkurImg from '@/assets/fatkur.jpeg';
+import mutiaImg from '@/assets/mutia.webp';
+import munirImg from '@/assets/munir.webp';
+
 export default function AboutPage() {
   const { t } = useTranslation();
 
@@ -47,7 +53,8 @@ export default function AboutPage() {
       avatar: 'MF',
       color: 'from-blue-500 to-cyan-500',
       borderColor: 'border-blue-500/50 hover:border-blue-500',
-      bgColor: 'from-blue-200 to-cyan-200'
+      bgColor: 'from-blue-200 to-cyan-200',
+      image: fatkurImg
     },
     {
       name: t('about.team.member2.name'),
@@ -55,7 +62,8 @@ export default function AboutPage() {
       avatar: 'MA',
       color: 'from-purple-500 to-pink-500',
       borderColor: 'border-purple-500/50 hover:border-purple-500',
-      bgColor: 'from-purple-100 to-pink-100'
+      bgColor: 'from-purple-100 to-pink-100',
+      image: mutiaImg
     },
     {
       name: t('about.team.member3.name'),
@@ -63,7 +71,8 @@ export default function AboutPage() {
       avatar: 'DM',
       color: 'from-emerald-500 to-teal-500',
       borderColor: 'border-emerald-500/50 hover:border-emerald-500',
-      bgColor: 'from-emerald-100 to-teal-100'
+      bgColor: 'from-emerald-100 to-teal-100',
+      image: dimasImg
     },
     {
       name: t('about.team.member4.name'),
@@ -71,7 +80,8 @@ export default function AboutPage() {
       avatar: 'JS',
       color: 'from-orange-500 to-amber-500',
       borderColor: 'border-orange-500/50 hover:border-orange-500',
-      bgColor: 'from-orange-100 to-amber-100'
+      bgColor: 'from-orange-100 to-amber-100',
+      image: jokoImg
     },
     {
       name: t('about.team.member5.name'),
@@ -79,7 +89,8 @@ export default function AboutPage() {
       avatar: 'DM',
       color: 'from-indigo-500 to-purple-500',
       borderColor: 'border-indigo-500/50 hover:border-indigo-500',
-      bgColor: 'from-indigo-100 to-purple-100'
+      bgColor: 'from-indigo-100 to-purple-100',
+      image: munirImg
     }
   ];
 
@@ -302,24 +313,33 @@ export default function AboutPage() {
                               whileHover={{ scale: 1.15, rotate: 10 }}
                               transition={{ type: "spring", stiffness: 300 }}
                             >
-                              {member.avatar}
-                          </motion.div>
-                          <motion.h3 
-                            className="mb-2 text-lg font-semibold text-foreground"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            {member.name}
-                          </motion.h3>
-                          <motion.p 
-                            className="text-sm text-muted-foreground"
-                            whileHover={{ scale: 1.02 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            {member.role}
-                          </motion.p>
-                        </CardContent>
-                      </Card>
+                              {member.image ? (
+                                <img
+                                  src={member.image}
+                                  alt={member.name}
+                                  className="h-24 w-24 rounded-full object-cover"
+                                  loading="lazy"
+                                />
+                              ) : (
+                                <span>{member.avatar}</span>
+                              )}
+                            </motion.div>
+                            <motion.h3 
+                              className="mb-2 text-lg font-semibold text-foreground"
+                              whileHover={{ scale: 1.05 }}
+                              transition={{ type: "spring", stiffness: 300 }}
+                            >
+                              {member.name}
+                            </motion.h3>
+                            <motion.p 
+                              className="text-sm text-muted-foreground"
+                              whileHover={{ scale: 1.02 }}
+                              transition={{ type: "spring", stiffness: 300 }}
+                            >
+                              {member.role}
+                            </motion.p>
+                          </CardContent>
+                        </Card>
                       </motion.div>
                     </CarouselItem>
                   ))}
