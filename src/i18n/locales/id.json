@@ -423,5 +423,176 @@
       "title": "Komitmen Kami",
       "content": "Kami berkomitmen untuk mempertahankan standar tertinggi akurasi medis, privasi pengguna, dan keandalan sistem. Alat ini dirancang untuk membantu, bukan menggantikan, konsultasi medis profesional."
     }
+  },
+  "contact": {
+    "badge": "Hubungi Kami",
+    "title": "Kontak",
+    "subtitle": "Punya pertanyaan atau butuh bantuan? Kami siap membantu. Hubungi kami dan kami akan merespon sesegera mungkin.",
+    "info": {
+      "title": "Informasi Kontak",
+      "email": {
+        "title": "Alamat Email"
+      },
+      "phone": {
+        "title": "Nomor Telepon"
+      },
+      "location": {
+        "title": "Lokasi",
+        "value": "Yogyakarta, Indonesia"
+      },
+      "hours": {
+        "title": "Jam Respon",
+        "value": "Tersedia 24/7"
+      }
+    },
+    "quickResponse": {
+      "title": "Respon Cepat",
+      "description": "Kami biasanya merespon semua pertanyaan dalam 24 jam pada hari kerja."
+    },
+    "form": {
+      "title": "Kirim Pesan",
+      "name": "Nama Lengkap",
+      "namePlaceholder": "Masukkan nama Anda",
+      "email": "Alamat Email",
+      "emailPlaceholder": "Masukkan email Anda",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Perihal apa?",
+      "message": "Pesan",
+      "messagePlaceholder": "Tulis pesan Anda di sini...",
+      "submit": "Kirim Pesan",
+      "successMessage": "Terima kasih! Pesan Anda telah berhasil dikirim."
+    }
+  },
+  "careers": {
+    "badge": "Bergabung dengan Tim Kami",
+    "title": "Karir di DengueExpert",
+    "subtitle": "Bergabunglah dengan kami dalam misi meningkatkan layanan kesehatan melalui teknologi inovatif dan membuat dampak positif pada kehidupan masyarakat.",
+    "noOpenings": {
+      "title": "Tidak Ada Posisi Terbuka Saat Ini",
+      "description": "Kami saat ini tidak sedang merekrut, tetapi kami selalu tertarik untuk bertemu dengan orang-orang berbakat. Jangan ragu untuk menghubungi dan memperkenalkan diri Anda!"
+    },
+    "whyJoinUs": {
+      "title": "Mengapa Bergabung dengan Kami?",
+      "subtitle": "Kami percaya dalam menciptakan lingkungan di mana tim kami dapat berkembang, berinovasi, dan membuat perbedaan nyata dalam teknologi kesehatan."
+    },
+    "benefits": {
+      "workLifeBalance": {
+        "title": "Keseimbangan Kerja-Hidup",
+        "desc": "Kami menghargai waktu dan kesejahteraan Anda dengan jam kerja fleksibel dan opsi kerja jarak jauh."
+      },
+      "growth": {
+        "title": "Pengembangan Profesional",
+        "desc": "Kesempatan belajar berkelanjutan dan program pengembangan karir untuk membantu Anda berkembang."
+      },
+      "recognition": {
+        "title": "Pengakuan & Penghargaan",
+        "desc": "Kontribusi Anda penting. Kami merayakan pencapaian dan memberikan penghargaan untuk keunggulan."
+      },
+      "environment": {
+        "title": "Lingkungan Kerja Hebat",
+        "desc": "Tempat kerja yang suportif dan kolaboratif di mana suara setiap orang didengar dan dihargai."
+      },
+      "innovation": {
+        "title": "Inovasi Utama",
+        "desc": "Bekerja dengan teknologi terdepan dan menjadi bagian dari solusi kesehatan yang inovatif."
+      },
+      "team": {
+        "title": "Tim yang Luar Biasa",
+        "desc": "Bergabunglah dengan tim yang beragam dari profesional bersemangat yang mencintai pekerjaan mereka."
+      }
+    },
+    "stayConnected": {
+      "title": "Tetap Terhubung",
+      "description": "Tertarik dengan peluang di masa depan? Hubungi kami dan kami akan memberi tahu Anda ketika posisi tersedia.",
+      "button": "Hubungi Kami"
+    }
+  },
+  "privacy": {
+    "badge": "Privasi Anda Penting",
+    "title": "Kebijakan Privasi",
+    "subtitle": "Kami berkomitmen untuk melindungi privasi Anda dan memastikan keamanan informasi pribadi Anda.",
+    "lastUpdated": "Terakhir Diperbarui",
+    "intro": {
+      "title": "Pendahuluan",
+      "content": "Kebijakan Privasi ini menjelaskan bagaimana DengueExpert mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat menggunakan sistem diagnostik kami. Dengan menggunakan layanan kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini."
+    },
+    "sections": {
+      "dataCollection": {
+        "title": "Informasi yang Kami Kumpulkan",
+        "content": "Kami mengumpulkan informasi yang Anda berikan secara langsung, termasuk:\n\n• Informasi Pribadi: Nama, alamat email, dan nomor telepon saat Anda mendaftar\n• Informasi Kesehatan: Gejala dan hasil tes yang Anda masukkan untuk diagnosis\n• Data Penggunaan: Informasi tentang bagaimana Anda berinteraksi dengan layanan kami\n• Informasi Perangkat: Alamat IP, jenis browser, dan sistem operasi\n\nSemua data kesehatan disimpan secara lokal di browser Anda dan tidak pernah dikirim ke server kami tanpa persetujuan eksplisit Anda."
+      },
+      "dataUsage": {
+        "title": "Bagaimana Kami Menggunakan Informasi Anda",
+        "content": "Kami menggunakan informasi yang dikumpulkan untuk tujuan berikut:\n\n• Untuk menyediakan dan memelihara layanan diagnostik kami\n• Untuk memproses penilaian gejala Anda dan menghasilkan diagnosis\n• Untuk meningkatkan dan mempersonalisasi pengalaman Anda\n• Untuk berkomunikasi dengan Anda tentang pembaruan dan informasi penting\n• Untuk memantau dan menganalisis pola penggunaan guna meningkatkan layanan kami\n• Untuk mematuhi kewajiban hukum dan melindungi hak kami\n\nKami tidak akan pernah menjual informasi pribadi Anda kepada pihak ketiga."
+      },
+      "dataSecurity": {
+        "title": "Keamanan Data",
+        "content": "Kami menerapkan langkah-langkah teknis dan organisasi yang tepat untuk melindungi informasi pribadi Anda:\n\n• Enkripsi data saat transit menggunakan SSL/TLS\n• Mekanisme autentikasi yang aman\n• Audit dan pembaruan keamanan rutin\n• Kontrol akses dan pemantauan\n• Penyimpanan lokal data kesehatan sensitif\n\nNamun, tidak ada metode transmisi melalui Internet yang 100% aman. Meskipun kami berupaya melindungi informasi Anda, kami tidak dapat menjamin keamanan absolut."
+      },
+      "dataSharing": {
+        "title": "Berbagi Informasi",
+        "content": "Kami tidak membagikan informasi pribadi Anda dengan pihak ketiga kecuali dalam keadaan berikut:\n\n• Dengan persetujuan eksplisit Anda\n• Untuk mematuhi kewajiban hukum atau perintah pengadilan\n• Untuk melindungi hak, privasi, keselamatan, atau properti kami\n• Sehubungan dengan merger, akuisisi, atau penjualan aset\n\nKami dapat membagikan data anonim dan agregat untuk tujuan penelitian dan statistik."
+      },
+      "userRights": {
+        "title": "Hak Anda",
+        "content": "Anda memiliki hak berikut terkait informasi pribadi Anda:\n\n• Akses: Meminta salinan data pribadi Anda\n• Koreksi: Meminta koreksi informasi yang tidak akurat\n• Penghapusan: Meminta penghapusan data pribadi Anda\n• Ekspor: Mengunduh data Anda dalam format portabel\n• Opt-out: Berhenti berlangganan komunikasi pemasaran\n\nUntuk menggunakan hak-hak ini, silakan hubungi kami menggunakan informasi yang disediakan di bawah."
+      },
+      "cookies": {
+        "title": "Cookie dan Pelacakan",
+        "content": "Kami menggunakan cookie dan teknologi pelacakan serupa untuk:\n\n• Mengingat preferensi dan pengaturan Anda\n• Mempertahankan sesi login Anda\n• Menganalisis lalu lintas dan pola penggunaan situs\n• Meningkatkan kinerja situs\n\nAnda dapat mengontrol cookie melalui pengaturan browser Anda. Namun, menonaktifkan cookie dapat mempengaruhi fungsionalitas layanan kami."
+      }
+    },
+    "contact": {
+      "title": "Pertanyaan tentang Privasi?",
+      "description": "Jika Anda memiliki pertanyaan atau kekhawatiran tentang Kebijakan Privasi kami atau bagaimana kami menangani data Anda, jangan ragu untuk menghubungi kami."
+    }
+  },
+  "terms": {
+    "badge": "Perjanjian Hukum",
+    "title": "Ketentuan Layanan",
+    "subtitle": "Harap baca ketentuan ini dengan seksama sebelum menggunakan sistem diagnostik DengueExpert.",
+    "lastUpdated": "Terakhir Diperbarui",
+    "intro": {
+      "title": "Persetujuan Ketentuan",
+      "content": "Dengan mengakses dan menggunakan DengueExpert, Anda setuju untuk terikat dengan Ketentuan Layanan ini dan semua hukum dan peraturan yang berlaku. Jika Anda tidak setuju dengan salah satu ketentuan ini, Anda dilarang menggunakan layanan ini."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "Penerimaan Ketentuan",
+        "content": "Ketentuan Layanan ini merupakan perjanjian yang mengikat secara hukum antara Anda dan DengueExpert. Dengan membuat akun atau menggunakan layanan kami, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat dengan ketentuan ini.\n\nJika Anda menggunakan layanan kami atas nama organisasi, Anda menyatakan bahwa Anda memiliki wewenang untuk mengikat organisasi tersebut dengan ketentuan ini."
+      },
+      "serviceDescription": {
+        "title": "Deskripsi Layanan",
+        "content": "DengueExpert adalah sistem pakar berbasis aturan yang dirancang untuk membantu penilaian awal gejala demam berdarah. Layanan kami:\n\n• Menyediakan saran diagnostik berdasarkan gejala\n• Menggunakan metodologi forward chaining\n• Menyimpan riwayat tes secara lokal di browser Anda\n• Menawarkan informasi edukatif tentang demam berdarah\n\nLayanan disediakan \"apa adanya\" dan \"sebagaimana tersedia\" tanpa jaminan apa pun."
+      },
+      "userResponsibilities": {
+        "title": "Tanggung Jawab Pengguna",
+        "content": "Sebagai pengguna DengueExpert, Anda setuju untuk:\n\n• Memberikan informasi yang akurat dan jujur\n• Menggunakan layanan hanya untuk tujuan yang sah\n• Tidak mencoba mendapatkan akses tidak sah ke sistem kami\n• Tidak menggunakan layanan untuk merugikan, melecehkan, atau menyamar sebagai orang lain\n• Menjaga kredensial akun Anda tetap aman\n• Tidak melakukan reverse engineering atau menyalin algoritma proprietary kami\n• Menerima tanggung jawab penuh atas keputusan yang dibuat berdasarkan saran diagnostik kami"
+      },
+      "medicalDisclaimer": {
+        "title": "Penafian Medis",
+        "content": "PENTING: DengueExpert BUKAN pengganti saran medis profesional, diagnosis, atau perawatan.\n\n• Sistem kami hanya memberikan penilaian awal\n• Selalu cari saran dari penyedia layanan kesehatan yang berkualifikasi\n• Jangan pernah mengabaikan saran medis profesional berdasarkan saran kami\n• Dalam keadaan darurat, hubungi layanan darurat segera\n• Kami tidak bertanggung jawab atas keputusan medis yang dibuat berdasarkan layanan kami\n\nAlat ini dirancang untuk membantu, bukan menggantikan, konsultasi medis profesional."
+      },
+      "intellectualProperty": {
+        "title": "Hak Kekayaan Intelektual",
+        "content": "Semua konten, fitur, dan fungsi DengueExpert dimiliki oleh kami dan dilindungi oleh hukum kekayaan intelektual:\n\n• Kode sumber, algoritma, dan aturan diagnostik\n• Desain, grafis, dan antarmuka pengguna\n• Teks, gambar, dan konten lainnya\n• Merek dagang dan branding\n\nAnda tidak boleh menyalin, memodifikasi, mendistribusikan, atau membuat karya turunan tanpa izin tertulis dari kami."
+      },
+      "limitation": {
+        "title": "Batasan Tanggung Jawab",
+        "content": "Sejauh diizinkan oleh hukum, DengueExpert tidak bertanggung jawab atas:\n\n• Kerusakan tidak langsung, insidental, atau konsekuensial\n• Kehilangan keuntungan, data, atau peluang bisnis\n• Komplikasi medis atau masalah kesehatan\n• Kerusakan akibat penggunaan atau ketidakmampuan menggunakan layanan kami\n• Kesalahan atau ketidakakuratan dalam saran diagnostik\n\nTotal tanggung jawab kami tidak akan melebihi jumlah yang Anda bayarkan untuk menggunakan layanan kami (jika ada)."
+      },
+      "termination": {
+        "title": "Pemutusan Akun",
+        "content": "Kami berhak untuk menghentikan atau menangguhkan akun Anda kapan saja, tanpa pemberitahuan sebelumnya, untuk:\n\n• Pelanggaran Ketentuan Layanan ini\n• Aktivitas penipuan atau ilegal\n• Penyalahgunaan layanan kami atau pengguna lain\n• Periode ketidakaktifan yang berkepanjangan\n\nSetelah pemutusan, hak Anda untuk menggunakan layanan akan segera berakhir. Anda juga dapat menghapus akun Anda kapan saja melalui pengaturan akun."
+      },
+      "changes": {
+        "title": "Perubahan Ketentuan",
+        "content": "Kami berhak untuk mengubah Ketentuan Layanan ini kapan saja. Perubahan akan berlaku segera setelah dipublikasikan di situs web kami.\n\n• Kami akan memberi tahu pengguna tentang perubahan signifikan melalui email\n• Penggunaan berkelanjutan setelah perubahan merupakan penerimaan\n• Ini adalah tanggung jawab Anda untuk meninjau ketentuan ini secara berkala\n\nTanggal \"Terakhir Diperbarui\" di bagian atas halaman ini menunjukkan kapan ketentuan ini terakhir direvisi."
+      }
+    },
+    "contact": {
+      "title": "Pertanyaan tentang Ketentuan?",
+      "description": "Jika Anda memiliki pertanyaan atau kekhawatiran tentang Ketentuan Layanan ini, silakan hubungi kami dan kami akan dengan senang hati membantu."
+    }
   }
 }

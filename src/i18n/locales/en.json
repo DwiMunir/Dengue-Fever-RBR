@@ -423,5 +423,176 @@
       "title": "Our Commitment",
       "content": "We are committed to maintaining the highest standards of medical accuracy, user privacy, and system reliability. This tool is designed to assist, not replace, professional medical consultation."
     }
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Contact Us",
+    "subtitle": "Have questions or need assistance? We're here to help. Reach out to us and we'll respond as soon as possible.",
+    "info": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Email Address"
+      },
+      "phone": {
+        "title": "Phone Number"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Yogyakarta, Indonesia"
+      },
+      "hours": {
+        "title": "Response Hours",
+        "value": "24/7 Available"
+      }
+    },
+    "quickResponse": {
+      "title": "Quick Response",
+      "description": "We typically respond to all inquiries within 24 hours during business days."
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "successMessage": "Thank you! Your message has been sent successfully."
+    }
+  },
+  "careers": {
+    "badge": "Join Our Team",
+    "title": "Careers at DengueExpert",
+    "subtitle": "Join us in our mission to improve healthcare through innovative technology and make a positive impact on people's lives.",
+    "noOpenings": {
+      "title": "No Open Positions at the moment",
+      "description": "We're not currently hiring, but we're always interested in meeting talented people. Feel free to reach out and introduce yourself!"
+    },
+    "whyJoinUs": {
+      "title": "Why Join Us?",
+      "subtitle": "We believe in creating an environment where our team can thrive, innovate, and make a real difference in healthcare technology."
+    },
+    "benefits": {
+      "workLifeBalance": {
+        "title": "Work-Life Balance",
+        "desc": "We value your time and well-being with flexible working hours and remote work options."
+      },
+      "growth": {
+        "title": "Professional Growth",
+        "desc": "Continuous learning opportunities and career development programs to help you grow."
+      },
+      "recognition": {
+        "title": "Recognition & Rewards",
+        "desc": "Your contributions matter. We celebrate achievements and reward excellence."
+      },
+      "environment": {
+        "title": "Great Environment",
+        "desc": "A supportive, collaborative workplace where everyone's voice is heard and valued."
+      },
+      "innovation": {
+        "title": "Innovation First",
+        "desc": "Work on cutting-edge technology and be part of innovative healthcare solutions."
+      },
+      "team": {
+        "title": "Amazing Team",
+        "desc": "Join a diverse team of passionate professionals who love what they do."
+      }
+    },
+    "stayConnected": {
+      "title": "Stay Connected",
+      "description": "Interested in future opportunities? Get in touch with us and we'll keep you updated when positions become available.",
+      "button": "Contact Us"
+    }
+  },
+  "privacy": {
+    "badge": "Your Privacy Matters",
+    "title": "Privacy Policy",
+    "subtitle": "We are committed to protecting your privacy and ensuring the security of your personal information.",
+    "lastUpdated": "Last Updated",
+    "intro": {
+      "title": "Introduction",
+      "content": "This Privacy Policy explains how DengueExpert collects, uses, and protects your personal information when you use our diagnostic system. By using our services, you agree to the collection and use of information in accordance with this policy."
+    },
+    "sections": {
+      "dataCollection": {
+        "title": "Information We Collect",
+        "content": "We collect information that you provide directly to us, including:\n\n• Personal Information: Name, email address, and phone number when you register\n• Health Information: Symptoms and test results you input for diagnosis\n• Usage Data: Information about how you interact with our service\n• Device Information: IP address, browser type, and operating system\n\nAll health data is stored locally in your browser and is never transmitted to our servers without your explicit consent."
+      },
+      "dataUsage": {
+        "title": "How We Use Your Information",
+        "content": "We use the collected information for the following purposes:\n\n• To provide and maintain our diagnostic service\n• To process your symptom assessments and generate diagnoses\n• To improve and personalize your experience\n• To communicate with you about updates and important information\n• To monitor and analyze usage patterns to improve our service\n• To comply with legal obligations and protect our rights\n\nWe will never sell your personal information to third parties."
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information:\n\n• Encryption of data in transit using SSL/TLS\n• Secure authentication mechanisms\n• Regular security audits and updates\n• Access controls and monitoring\n• Local storage of sensitive health data\n\nHowever, no method of transmission over the Internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security."
+      },
+      "dataSharing": {
+        "title": "Information Sharing",
+        "content": "We do not share your personal information with third parties except in the following circumstances:\n\n• With your explicit consent\n• To comply with legal obligations or court orders\n• To protect our rights, privacy, safety, or property\n• In connection with a merger, acquisition, or sale of assets\n\nWe may share anonymized and aggregated data for research and statistical purposes."
+      },
+      "userRights": {
+        "title": "Your Rights",
+        "content": "You have the following rights regarding your personal information:\n\n• Access: Request a copy of your personal data\n• Correction: Request correction of inaccurate information\n• Deletion: Request deletion of your personal data\n• Export: Download your data in a portable format\n• Opt-out: Unsubscribe from marketing communications\n\nTo exercise these rights, please contact us using the information provided below."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to:\n\n• Remember your preferences and settings\n• Maintain your login session\n• Analyze site traffic and usage patterns\n• Improve site performance\n\nYou can control cookies through your browser settings. However, disabling cookies may affect the functionality of our service."
+      }
+    },
+    "contact": {
+      "title": "Questions About Privacy?",
+      "description": "If you have any questions or concerns about our Privacy Policy or how we handle your data, please don't hesitate to contact us."
+    }
+  },
+  "terms": {
+    "badge": "Legal Agreement",
+    "title": "Terms of Service",
+    "subtitle": "Please read these terms carefully before using DengueExpert diagnostic system.",
+    "lastUpdated": "Last Updated",
+    "intro": {
+      "title": "Agreement to Terms",
+      "content": "By accessing and using DengueExpert, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using this service."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "These Terms of Service constitute a legally binding agreement between you and DengueExpert. By creating an account or using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.\n\nIf you are using our services on behalf of an organization, you represent that you have the authority to bind that organization to these terms."
+      },
+      "serviceDescription": {
+        "title": "Service Description",
+        "content": "DengueExpert is a rule-based expert system designed to assist in the preliminary assessment of dengue fever symptoms. Our service:\n\n• Provides symptom-based diagnostic suggestions\n• Uses forward chaining methodology\n• Stores test history locally in your browser\n• Offers educational information about dengue fever\n\nThe service is provided \"as is\" and \"as available\" without any warranties of any kind."
+      },
+      "userResponsibilities": {
+        "title": "User Responsibilities",
+        "content": "As a user of DengueExpert, you agree to:\n\n• Provide accurate and truthful information\n• Use the service only for lawful purposes\n• Not attempt to gain unauthorized access to our systems\n• Not use the service to harm, harass, or impersonate others\n• Keep your account credentials secure\n• Not reverse engineer or copy our proprietary algorithms\n• Accept sole responsibility for decisions made based on our diagnostic suggestions"
+      },
+      "medicalDisclaimer": {
+        "title": "Medical Disclaimer",
+        "content": "IMPORTANT: DengueExpert is NOT a substitute for professional medical advice, diagnosis, or treatment.\n\n• Our system provides preliminary assessments only\n• Always seek the advice of qualified healthcare providers\n• Never disregard professional medical advice based on our suggestions\n• In case of emergency, contact emergency services immediately\n• We are not liable for any medical decisions made based on our service\n\nThis tool is designed to assist, not replace, professional medical consultation."
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property Rights",
+        "content": "All content, features, and functionality of DengueExpert are owned by us and are protected by intellectual property laws:\n\n• Source code, algorithms, and diagnostic rules\n• Design, graphics, and user interface\n• Text, images, and other content\n• Trademarks and branding\n\nYou may not copy, modify, distribute, or create derivative works without our express written permission."
+      },
+      "limitation": {
+        "title": "Limitation of Liability",
+        "content": "To the maximum extent permitted by law, DengueExpert shall not be liable for:\n\n• Any indirect, incidental, or consequential damages\n• Loss of profits, data, or business opportunities\n• Medical complications or health issues\n• Damages resulting from use or inability to use our service\n• Errors or inaccuracies in diagnostic suggestions\n\nOur total liability shall not exceed the amount you paid for using our service (if any)."
+      },
+      "termination": {
+        "title": "Account Termination",
+        "content": "We reserve the right to terminate or suspend your account at any time, without prior notice, for:\n\n• Violation of these Terms of Service\n• Fraudulent or illegal activities\n• Abuse of our service or other users\n• Extended periods of inactivity\n\nUpon termination, your right to use the service will immediately cease. You may also delete your account at any time through your account settings."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to our website.\n\n• We will notify users of significant changes via email\n• Continued use after changes constitutes acceptance\n• It is your responsibility to review these terms periodically\n\nThe \"Last Updated\" date at the top of this page indicates when these terms were last revised."
+      }
+    },
+    "contact": {
+      "title": "Questions About Terms?",
+      "description": "If you have any questions or concerns about these Terms of Service, please contact us and we'll be happy to help."
+    }
   }
 }

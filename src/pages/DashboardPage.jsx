@@ -114,7 +114,7 @@ export default function DashboardPage() {
 
   return (
     <AnimatedPage className="min-h-[calc(100vh-4rem)] py-8 sm:py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <FadeIn>
           <div className="mb-10">

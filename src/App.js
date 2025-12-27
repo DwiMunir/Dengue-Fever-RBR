@@ -9,14 +9,18 @@ import { ProtectedRoute, PublicRoute } from '@/components/ProtectedRoute';
 import { queryClient } from '@/lib/queryClient';
 
 // Pages
-import LandingPage from '@/pages/LandingPage';
-import LoginPage from '@/pages/LoginPage';
-import RegisterPage from '@/pages/RegisterPage';
-import DashboardPage from '@/pages/DashboardPage';
-import TestPage from '@/pages/TestPage';
-import ResultPage from '@/pages/ResultPage';
-import HistoryPage from '@/pages/HistoryPage';
-import AboutPage from '@/pages/AboutPage';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import DashboardPage from './pages/DashboardPage';
+import TestPage from './pages/TestPage';
+import ResultPage from './pages/ResultPage';
+import HistoryPage from './pages/HistoryPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import CareersPage from './pages/CareersPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -29,6 +33,10 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms" element={<TermsOfServicePage />} />
           <Route 
             path="/login" 
             element={

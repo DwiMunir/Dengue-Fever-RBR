@@ -27,12 +27,12 @@ export const Footer = () => {
     ],
     company: [
       { label: 'About Us', href: '/about' },
-      { label: 'Contact', href: '#' },
-      { label: 'Careers', href: '#' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Careers', href: '/careers' },
     ],
     legal: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
       { label: 'Cookie Policy', href: '#' },
     ],
   };

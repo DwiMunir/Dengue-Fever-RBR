@@ -134,7 +134,7 @@ export default function HistoryPage() {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <FadeIn>
           <div className="mb-8">
