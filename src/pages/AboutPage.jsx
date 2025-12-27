@@ -45,6 +45,27 @@ export default function AboutPage() {
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
+  const [carouselApi, setCarouselApi] = React.useState(null);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [scrollSnaps, setScrollSnaps] = React.useState([]);
+
+  React.useEffect(() => {
+    if (!carouselApi) return;
+
+    const updateState = () => {
+      setSelectedIndex(carouselApi.selectedScrollSnap());
+      setScrollSnaps(carouselApi.scrollSnapList());
+    };
+
+    updateState();
+    carouselApi.on("select", updateState);
+    carouselApi.on("reInit", updateState);
+
+    return () => {
+      carouselApi.off("select", updateState);
+      carouselApi.off("reInit", updateState);
+    };
+  }, [carouselApi]);
 
   const teamMembers = [
     {
@@ -72,7 +93,7 @@ export default function AboutPage() {
       color: 'from-emerald-500 to-teal-500',
       borderColor: 'border-emerald-500/50 hover:border-emerald-500',
       bgColor: 'from-emerald-100 to-teal-100',
-      image: dimasImg
+      image: munirImg
     },
     {
       name: t('about.team.member4.name'),
@@ -90,7 +111,7 @@ export default function AboutPage() {
       color: 'from-indigo-500 to-purple-500',
       borderColor: 'border-indigo-500/50 hover:border-indigo-500',
       bgColor: 'from-indigo-100 to-purple-100',
-      image: munirImg
+      image: dimasImg
     }
   ];
 
@@ -295,6 +316,7 @@ export default function AboutPage() {
                   loop: true,
                 }}
                 className="w-full"
+                setApi={setCarouselApi}
                 onMouseEnter={() => plugin.current.stop()}
                 onMouseLeave={() => plugin.current.play()}
               >
@@ -345,6 +367,23 @@ export default function AboutPage() {
                   ))}
                 </CarouselContent>
               </Carousel>
+              {scrollSnaps.length > 1 && (
+                <div className="mt-6 flex items-center justify-center gap-2">
+                  {scrollSnaps.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      aria-label={`Go to slide ${index + 1}`}
+                      onClick={() => carouselApi?.scrollTo(index)}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                        index === selectedIndex
+                          ? "w-6 bg-primary shadow-sm shadow-primary/40"
+                          : "w-2.5 bg-muted-foreground/40 hover:bg-primary/50"
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </FadeIn>        {/* Commitment */}
